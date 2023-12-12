@@ -6,35 +6,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jetter Garcia</title>
     <style>
+      /* Global Styles */
+      /* ======================================= */
+      :root {
+        --primary-color: #9daec8;
+      }
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
+
+      abbr {
+        text-decoration: none;
+      }
+
       body {
-        background-color: #f2f2f2;
+        background-color: #0a0a0a;
+        color: #ebebeb;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
       }
+
+      p {
+        line-height: 1.5;
+      }
+
+      /* Header styles */
+      /* ======================================= */
       header {
         padding: 15rem 0;
       }
-      h1 {
-        color: #0000ff;
+
+      header h1 {
+        color: var(--primary-color);
         text-align: center;
         font-size: 4rem;
         margin: 0 0 1rem;
       }
-      p {
+
+      header p {
         text-align: center;
         font-size: 1rem;
+      }
+
+      /* About Me styles */
+      .about-me {
+        padding: 5rem 10rem;
+        display: flex;
+      }
+
+      .about-me .pic img {
+        border-radius: 2rem;
+      }
+
+      .about-me .desc {
+        margin-left: 2rem;
+      }
+
+      .about-me .desc h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .about-me .desc .intro {
+        margin-bottom: 1rem;
+      }
+
+      .about-me .desc .intro strong {
+        color: var(--primary-color);
+      }
+
+      .about-me .desc .biography {
+        margin-bottom: 3rem;
+      }
+
+      .about-me .desc .details {
+        margin-bottom: 0.5rem;
+      }
+
+      .about-me .desc .label {
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      /* Quote styles */
+      /* ======================================= */
+      .favorite-quote {
+        padding: 5rem 0;
+        background-color: #1a1a1a;
+        display: grid;
+        place-items: center;
+      }
+
+      .favorite-quote .container {
+        text-align: center;
+      }
+
+      .favorite-quote .container .quote {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
       }
     </style>
   </head>
   <body>
     <header>
       <h1>Jetter Garcia</h1>
-      <p>A BSIT <strong>College Student</strong> at Asia Pacific College</p>
+      <p>
+        A
+        <abbr title="Bachelor of Science in Information Technology">BSIT</abbr>
+        <strong>College Student</strong> at Asia Pacific College
+      </p>
     </header>
+    <section class="about-me">
+      <div class="pic">
+        <img
+          src="./assets/images/my_pic.jpg"
+          alt="Jetter Garcia's image"
+          height="500"
+        />
+      </div>
+      <div class="desc">
+        <h2>About Me</h2>
+        <p class="intro">
+          I'm an aspiring <strong>fullstack web developer.</strong>
+        </p>
+        <p class="biography">
+          I find joy in exploring new ideas and perspectives, always looking to
+          bring a fresh, innovative outlook to every challenge. I love
+          connecting with like-minded people and building meaningful
+          relationships with them, fostering a collaborative spirit wherever I
+          go.
+        </p>
+        <p class="details"><span class="label">Location:</span> Philippines</p>
+        <p class="details">
+          <span class="label">Timezone:</span> GMT/UTC &plus;08:00
+        </p>
+        <p class="details">
+          <span class="label">Languages:</span> English, Filipino
+        </p>
+      </div>
+    </section>
+    <section class="favorite-quote">
+      <div class="container">
+        <p class="quote">
+          <q>The best way to predict the future is to create it.</q>
+        </p>
+        <p class="author">- <i>Peter Drucker</i></p>
+      </div>
+    </section>
   </body>
 </html>
