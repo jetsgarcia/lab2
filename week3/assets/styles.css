@@ -157,3 +157,21 @@ footer {
   background-color: #000;
   text-align: center;
 }
+
+footer p {
+  margin-bottom: 2rem;
+}
+
+footer .container > a {
+  margin: 0 1rem;
+}
+
+footer .container > a img {
+  border-radius: 4px;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .container > a img:hover {
+  opacity: 1;
+}
