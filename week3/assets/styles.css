@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 /* Global Styles */
 /* ======================================= */
 :root {
@@ -15,6 +21,7 @@ html {
 }
 
 body {
+  margin: 0;
   background-color: #0a0a0a;
   color: #ebebeb;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
