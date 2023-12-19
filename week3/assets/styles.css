@@ -1,6 +1,13 @@
+/* Resets */
 *,
 *::after,
 *::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -10,18 +17,11 @@
   --primary-color: #9daec8;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   background-color: #0a0a0a;
   color: #ebebeb;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -54,6 +54,10 @@ header p {
   margin-bottom: 3rem;
 }
 
+header p strong {
+  font-weight: 400;
+}
+
 header a {
   color: #111;
   text-decoration: none;
@@ -81,28 +85,21 @@ header a:hover {
   margin-left: 2rem;
 }
 
-.about-me .desc h2 {
+.about-me h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.about-me .desc .intro {
-  margin-bottom: 1rem;
-}
-
-.about-me .desc .intro strong {
+.about-me .intro strong {
   color: var(--primary-color);
 }
 
-.about-me .desc .biography {
-  margin-bottom: 3rem;
+.about-me .biography,
+.about-me .details {
+  margin-bottom: 1rem;
 }
 
-.about-me .desc .details {
-  margin-bottom: 0.5rem;
-}
-
-.about-me .desc .label {
+.about-me .label {
   font-weight: bold;
   color: var(--primary-color);
 }
