@@ -1,0 +1,25 @@
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  animation: slideIn 0.5s ease-in-out forwards;
+  visibility: visible;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(10%);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

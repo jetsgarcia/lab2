@@ -85,8 +85,12 @@ header {
       margin-bottom: 1rem;
     }
 
-    .intro strong {
-      color: $primary-color;
+    .intro {
+      margin-bottom: 0.5rem;
+
+      strong {
+        color: $primary-color;
+      }
     }
 
     .biography,
@@ -179,3 +183,4 @@ footer {
 
 @import "mobile";
 @import "tablet";
+@import "animations";

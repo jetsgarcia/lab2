@@ -74,6 +74,9 @@ header a:hover {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+.about-me .desc .intro {
+  margin-bottom: 0.5rem;
+}
 .about-me .desc .intro strong {
   color: #9daec8;
 }
@@ -216,5 +219,30 @@ footer .container > a img:hover {
   }
   .what-i-do {
     padding: 5rem;
+  }
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  animation: slideIn 0.5s ease-in-out forwards;
+  visibility: visible;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(10%);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }/*# sourceMappingURL=styles.css.map */
