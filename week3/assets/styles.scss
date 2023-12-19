@@ -1,0 +1,181 @@
+$primary-color: #9daec8;
+$section-padding: 5rem 10rem;
+
+/* Resets */
+/* ======================================= */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+/* ======================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ebebeb;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* Header styles */
+/* ======================================= */
+header {
+  padding: 15rem 0;
+  text-align: center;
+
+  h1 {
+    color: $primary-color;
+    font-size: 4rem;
+    margin: 0 0 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+
+    strong {
+      font-weight: 400;
+    }
+  }
+
+  a {
+    color: #111;
+    text-decoration: none;
+    background-color: $primary-color;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #8c9db3;
+    }
+  }
+}
+
+/* About Me styles */
+.about-me {
+  padding: $section-padding;
+  display: flex;
+
+  .pic img {
+    border-radius: 2rem;
+  }
+
+  .desc {
+    margin-left: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro strong {
+      color: $primary-color;
+    }
+
+    .biography,
+    .details {
+      margin-bottom: 1rem;
+    }
+
+    .label {
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+}
+
+/* Quote styles */
+/* ======================================= */
+.favorite-quote {
+  padding: 5rem 0;
+  background-color: #1a1a1a;
+  display: grid;
+  place-items: center;
+
+  .container {
+    text-align: center;
+
+    .quote {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/* What I Do styles */
+/* ======================================= */
+.what-i-do {
+  padding: $section-padding;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+
+    & > div {
+      background-color: #222;
+      border-radius: 1.5rem;
+      padding: 2rem 2rem;
+      text-align: center;
+
+      .title {
+        font-size: 1.3rem;
+        margin: 1.5rem 0 1rem;
+        font-weight: bold;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/* footer styles */
+/* ======================================= */
+footer {
+  padding: 2rem 0;
+  background-color: #000;
+  text-align: center;
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  .container > a {
+    margin: 0 1rem;
+
+    img {
+      border-radius: 4px;
+      opacity: 0.5;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@import "mobile";
+@import "tablet";
