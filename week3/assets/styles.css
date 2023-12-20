@@ -133,9 +133,16 @@ header a:hover {
   color: #9daec8;
 }
 
+/* What I Do styles */
+/* ======================================= */
+.moving-eye {
+  margin: 5rem 0;
+}
+
 /* footer styles */
 /* ======================================= */
 footer {
+  margin-top: 8rem;
   padding: 2rem 0;
   background-color: #000;
   text-align: center;
@@ -221,6 +228,25 @@ footer .container > a img:hover {
     padding: 5rem;
   }
 }
+.moving-eye {
+  display: grid;
+  place-items: center;
+  margin-bottom: 3rem;
+}
+.moving-eye .moving-eye-container {
+  position: relative;
+}
+.moving-eye #anchor {
+  width: 12rem;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.moving-eye #eye {
+  width: 5rem;
+  position: absolute;
+}
+
 .hidden {
   opacity: 0;
   visibility: hidden;
