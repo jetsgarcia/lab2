@@ -100,7 +100,9 @@ header a:hover {
 .about-me .desc .intro strong {
   color: #77adff;
 }
-.about-me .desc .biography,
+.about-me .desc .biography {
+  margin-bottom: 2rem;
+}
 .about-me .desc .details {
   margin-bottom: 1rem;
 }
