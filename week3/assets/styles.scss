@@ -49,7 +49,7 @@ header {
     left: 50%;
     transform: translate(-50%, -30%);
     width: 100%;
-    height: 100vw; // Use 100vw for a perfect circle
+    height: 100vw;
     background: radial-gradient(circle, #2f3cad, #181f5a, #060816, #000000);
     filter: blur(20px);
     z-index: -1;
@@ -93,7 +93,7 @@ header {
 .about-me {
   padding: $section-padding;
   display: flex;
-  background-color: #111;
+  background-color: #0a0a0a;
 
   .pic img {
     border-radius: 2rem;
@@ -166,6 +166,10 @@ header {
       border-radius: 1.5rem;
       padding: 2rem 2rem;
       text-align: center;
+
+      .desc {
+        line-height: 2;
+      }
 
       .title {
         font-size: 1.3rem;
