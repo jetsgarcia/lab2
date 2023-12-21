@@ -1,4 +1,6 @@
-$primary-color: #9daec8;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap");
+
+$primary-color: #77adff;
 $section-padding: 5rem 10rem;
 
 /* Resets */
@@ -21,8 +23,7 @@ html {
 body {
   background-color: #0a0a0a;
   color: #ebebeb;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 abbr {
@@ -36,18 +37,38 @@ p {
 /* Header styles */
 /* ======================================= */
 header {
-  padding: 15rem 0;
+  height: 100vh;
   text-align: center;
+  display: grid;
+  place-items: center;
 
-  h1 {
-    color: $primary-color;
-    font-size: 4rem;
-    margin: 0 0 1rem;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 100%;
+    height: 100vw; // Use 100vw for a perfect circle
+    background: radial-gradient(circle, #2f3cad, #181f5a, #060816, #000000);
+    filter: blur(20px);
+    z-index: -1;
   }
 
-  p {
+  .japanese {
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    letter-spacing: 1px;
+    font-size: 3.5rem;
+    margin: 0 0 1rem;
+    font-weight: 700;
+  }
+
+  .subheading {
     font-size: 1rem;
-    margin-bottom: 3rem;
+    letter-spacing: 1.5px;
 
     strong {
       font-weight: 400;
@@ -72,6 +93,7 @@ header {
 .about-me {
   padding: $section-padding;
   display: flex;
+  background-color: #111;
 
   .pic img {
     border-radius: 2rem;
