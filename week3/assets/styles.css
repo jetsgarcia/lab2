@@ -95,12 +95,13 @@ header a:hover {
   margin-bottom: 1rem;
 }
 .about-me .desc .intro {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .about-me .desc .intro strong {
   color: #77adff;
 }
 .about-me .desc .biography {
+  line-height: 1.8;
   margin-bottom: 2rem;
 }
 .about-me .desc .details {

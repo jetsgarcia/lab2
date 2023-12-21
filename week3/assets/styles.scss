@@ -108,7 +108,7 @@ header {
     }
 
     .intro {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
 
       strong {
         color: $primary-color;
@@ -116,6 +116,7 @@ header {
     }
 
     .biography {
+      line-height: 1.8;
       margin-bottom: 2rem;
     }
 
