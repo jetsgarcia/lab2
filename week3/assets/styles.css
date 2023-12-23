@@ -10,6 +10,24 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* The area the scrollbar slides on */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* The draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #275f9e;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #337bce;
+}
+
 /* Global Styles */
 /* ======================================= */
 html {
