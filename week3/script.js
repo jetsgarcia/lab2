@@ -1,27 +1,40 @@
-// For the text effect
+// The Japanese and English alphabets are defined as constants.
 const japaneseAlphabet =
   "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん";
 const englishAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+// The `iterations` variable is used to keep track of the number of iterations performed.
 let iterations = 0;
+
+// The `timeoutId` variable is used to store the ID of the timeout function.
 let timeoutId;
+
+// The `isJapanese` variable is used to determine whether the current language is Japanese.
 let isJapanese = true;
 
+// The `mouseover` event listener is added to the element with the class "japanese".
 document.querySelector(".japanese").onmouseover = (event) => {
+  // The timeout function is cleared.
   clearTimeout(timeoutId);
 
+  // The `translate` function is used to translate a letter from the Japanese alphabet to the English alphabet.
   const translate = (letter, alphabet) => {
     const index = alphabet.indexOf(letter);
     return index !== -1 ? englishAlphabet[index] : letter;
   };
 
+  // The `interval` function is used to change the text in the target element over time.
   const interval = setInterval(() => {
+    // The text in the target element is changed.
     event.target.innerText = event.target.innerText
       .split("")
       .map((letter, index) => {
+        // The letter is translated if the index is less than the number of iterations.
         if (index < iterations) {
           return translate(event.target.dataset.value[index], japaneseAlphabet);
         }
 
+        // A random letter from the Japanese or English alphabet is returned.
         if (isJapanese) {
           return japaneseAlphabet[Math.floor(Math.random() * 46)];
         } else {
@@ -30,10 +43,12 @@ document.querySelector(".japanese").onmouseover = (event) => {
       })
       .join("");
 
+    // The interval function is cleared and a new timeout function is set if the number of iterations is greater than or equal to the length of the value in the target element's data attribute.
     if (iterations >= event.target.dataset.value.length) {
       clearInterval(interval);
 
       timeoutId = setTimeout(() => {
+        // A new interval function is set to change the text in the target element to random Japanese letters.
         const hackerInterval = setInterval(() => {
           event.target.innerText = Array.from(
             { length: event.target.dataset.value.length },
@@ -41,6 +56,7 @@ document.querySelector(".japanese").onmouseover = (event) => {
           ).join("");
         }, 100);
 
+        // The interval function is cleared and the text in the target element is set to "こんにちは".
         setTimeout(() => {
           clearInterval(hackerInterval);
           event.target.innerText = "こんにちは";
@@ -49,13 +65,14 @@ document.querySelector(".japanese").onmouseover = (event) => {
       }, 2000);
     }
 
-    // change to false if the text is already in english
+    // The `isJapanese` variable is toggled.
     if (isJapanese) {
       isJapanese = false;
     } else {
       isJapanese = true;
     }
 
+    // The number of iterations is increased.
     iterations += 1 / 3;
   }, 30);
 };
@@ -71,7 +88,7 @@ document.addEventListener("mousemove", (e) => {
   const anchorY = rect.top + rect.height / 2;
 
   const eye = document.querySelector("#eye");
-  const eyeMaxMove = 10; // Maximum distance eye can move from center, adjust as needed
+  const eyeMaxMove = 10;
 
   // Calculate distance from center of anchor to mouse position
   const dx = mousex - anchorX;
