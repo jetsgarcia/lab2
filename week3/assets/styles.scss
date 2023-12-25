@@ -186,11 +186,21 @@ header {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
 
-    & > div {
+    > div {
       background-color: #222;
       border-radius: 1.5rem;
       padding: 2rem 2rem;
       text-align: center;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #333;
+      }
+
+      > lord-icon {
+        width: 5rem;
+        height: 5rem;
+      }
 
       .desc {
         line-height: 2;
