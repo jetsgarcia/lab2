@@ -1,3 +1,5 @@
+// For the text effect
+// ==========================================
 // The Japanese and English alphabets are defined as constants.
 const japaneseAlphabet =
   "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん";
@@ -78,6 +80,7 @@ document.querySelector(".japanese").onmouseover = (event) => {
 };
 
 // For the moving eyes
+// ==========================================
 document.addEventListener("mousemove", (e) => {
   const mousex = e.clientX;
   const mousey = e.clientY;
@@ -118,5 +121,6 @@ const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((element) => observer.observe(element));
 
 // For the current year in the footer
+// ==========================================
 const currentDate = new Date().getFullYear();
 document.querySelector("#copyright-date").innerHTML = currentDate;
