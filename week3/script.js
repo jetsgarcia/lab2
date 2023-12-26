@@ -1,30 +1,41 @@
 // For the text effect
 // ==========================================
-// The Japanese and English alphabets are defined as constants.
-const japaneseAlphabet =
-  "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん";
-const englishAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// This script waits for the DOM content to be fully loaded.
+document.addEventListener("DOMContentLoaded", () => {
+  // After 1 second (1000 milliseconds), the following function will be executed.
+  setTimeout(() => {
+    const text = "こんにちは";
+    const textPlace = document.querySelector(".japanese");
+    let i = 0;
 
-// The `iterations` variable is used to keep track of the number of iterations performed.
-let iterations = 0;
+    // This function types out the text one character at a time.
+    function typeWriter() {
+      // If there are still characters left in the text...
+      if (i < text.length) {
+        // ...add the next character to the HTML element...
+        textPlace.innerHTML += text.charAt(i++);
+        // ...and call this function again after 100 milliseconds.
+        setTimeout(typeWriter, 100);
+      }
+    }
 
-// The `timeoutId` variable is used to store the ID of the timeout function.
-let timeoutId;
+    typeWriter();
+  }, 1000);
+});
 
-// The `isJapanese` variable is used to determine whether the current language is Japanese.
-let isJapanese = true;
-
-// The `mouseover` event listener is added to the element with the class "japanese".
+// Event listener when mouse hovers to the text element
 document.querySelector(".japanese").onmouseover = (event) => {
-  // The timeout function is cleared.
-  clearTimeout(timeoutId);
+  const japaneseAlphabet =
+    "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん";
+  const englishAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let iterations = 0;
+  let isJapanese = true;
 
   // The `translate` function is used to translate a letter from the Japanese alphabet to the English alphabet.
   const translate = (letter, alphabet) => {
     const index = alphabet.indexOf(letter);
     return index !== -1 ? englishAlphabet[index] : letter;
   };
-
   // The `interval` function is used to change the text in the target element over time.
   const interval = setInterval(() => {
     // The text in the target element is changed.
@@ -49,7 +60,7 @@ document.querySelector(".japanese").onmouseover = (event) => {
     if (iterations >= event.target.dataset.value.length) {
       clearInterval(interval);
 
-      timeoutId = setTimeout(() => {
+      setTimeout(() => {
         // A new interval function is set to change the text in the target element to random Japanese letters.
         const hackerInterval = setInterval(() => {
           event.target.innerText = Array.from(

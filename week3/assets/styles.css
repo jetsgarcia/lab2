@@ -68,8 +68,39 @@ header::before {
   filter: blur(20px);
   z-index: -1;
 }
-header .japanese {
+header div {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 1rem;
+}
+header div .japanese {
+  display: inline-block;
   margin-bottom: 1.5rem;
+  height: 1rem;
+}
+header div .underline {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  margin-top: -0.5rem;
+  animation: underlineExpand 3s ease-in-out infinite;
+}
+@keyframes underlineExpand {
+  0%, 100% {
+    transform: scaleX(0.8);
+    transform-origin: 50% 100%;
+  }
+  25%, 75%, 50% {
+    transform: scaleX(1);
+    transform-origin: 50% 100%;
+  }
+}
+header .element-to-animate {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  transition: border-bottom-width 0.3s ease;
+  animation: underlineExpand 1s ease-in-out;
 }
 header h1 {
   letter-spacing: 1px;
