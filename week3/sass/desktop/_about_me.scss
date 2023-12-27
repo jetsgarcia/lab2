@@ -1,0 +1,40 @@
+.about-me {
+  padding: $section-padding;
+  display: flex;
+  background-color: #0a0a0a;
+
+  .pic img {
+    border-radius: 2rem;
+  }
+
+  .desc {
+    margin-left: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro {
+      margin-bottom: 1rem;
+
+      strong {
+        color: $primary-color;
+      }
+    }
+
+    .biography {
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .details {
+      margin-bottom: 1rem;
+    }
+
+    .label {
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+}

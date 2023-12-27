@@ -48,8 +48,6 @@ p {
   line-height: 1.5;
 }
 
-/* Header styles */
-/* ======================================= */
 header {
   height: 100vh;
   text-align: center;
@@ -118,7 +116,7 @@ header .subheading strong {
 header a {
   color: #111;
   text-decoration: none;
-  background-color: #77adff;
+  background-color: hsl(216, 100%, 73%);
   padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease-in-out;
@@ -127,7 +125,6 @@ header a:hover {
   background-color: #8c9db3;
 }
 
-/* About Me styles */
 .about-me {
   padding: 5rem 10rem;
   display: flex;
@@ -147,7 +144,7 @@ header a:hover {
   margin-bottom: 1rem;
 }
 .about-me .desc .intro strong {
-  color: #77adff;
+  color: hsl(216, 100%, 73%);
 }
 .about-me .desc .biography {
   line-height: 1.8;
@@ -158,11 +155,9 @@ header a:hover {
 }
 .about-me .desc .label {
   font-weight: bold;
-  color: #77adff;
+  color: hsl(216, 100%, 73%);
 }
 
-/* Quote styles */
-/* ======================================= */
 .favorite-quote {
   padding: 5rem 0;
   background-color: #1a1a1a;
@@ -177,8 +172,6 @@ header a:hover {
   margin-bottom: 1rem;
 }
 
-/* What I Do styles */
-/* ======================================= */
 .what-i-do {
   padding: 5rem 10rem;
 }
@@ -213,17 +206,13 @@ header a:hover {
   font-size: 1.3rem;
   margin: 1.5rem 0 1rem;
   font-weight: bold;
-  color: #77adff;
+  color: hsl(216, 100%, 73%);
 }
 
-/* Moving eyes */
-/* ======================================= */
 .moving-eye {
   margin: 5rem 0;
 }
 
-/* Footer styles */
-/* ======================================= */
 footer {
   margin-top: 8rem;
   padding: 2rem 0;

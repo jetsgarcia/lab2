@@ -1,0 +1,15 @@
+.favorite-quote {
+  padding: 5rem 0;
+  background-color: #1a1a1a;
+  display: grid;
+  place-items: center;
+
+  .container {
+    text-align: center;
+
+    .quote {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

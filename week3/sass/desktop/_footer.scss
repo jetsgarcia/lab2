@@ -1,0 +1,24 @@
+footer {
+  margin-top: 8rem;
+  padding: 2rem 0;
+  background-color: #000;
+  text-align: center;
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  .container > a {
+    margin: 0 1rem;
+
+    img {
+      border-radius: 4px;
+      opacity: 0.5;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
