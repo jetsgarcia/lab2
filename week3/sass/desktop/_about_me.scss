@@ -1,7 +1,7 @@
 .about-me {
-  padding: $section-padding;
+  padding: 5rem 10rem;
   display: flex;
-  background-color: #0a0a0a;
+  background-color: $background-color;
 
   .pic img {
     border-radius: 2rem;
