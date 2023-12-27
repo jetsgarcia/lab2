@@ -1,6 +1,7 @@
 // For the text effect
 // ==========================================
 // This script waits for the DOM content to be fully loaded.
+let isRunning = false;
 document.addEventListener("DOMContentLoaded", () => {
   // After 1 second (1000 milliseconds), the following function will be executed.
   setTimeout(() => {
@@ -25,6 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Event listener when mouse hovers to the text element
 document.querySelector(".japanese").onmouseover = (event) => {
+  if (isRunning) {
+    return;
+  }
+  isRunning = true;
   const japaneseAlphabet =
     "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん";
   const englishAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -55,6 +60,7 @@ document.querySelector(".japanese").onmouseover = (event) => {
         }
       })
       .join("");
+    hoverTriggered = false;
 
     // The interval function is cleared and a new timeout function is set if the number of iterations is greater than or equal to the length of the value in the target element's data attribute.
     if (iterations >= event.target.dataset.value.length) {
@@ -74,6 +80,7 @@ document.querySelector(".japanese").onmouseover = (event) => {
           clearInterval(hackerInterval);
           event.target.innerText = "こんにちは";
           iterations = 0;
+          isRunning = false;
         }, 2000);
       }, 2000);
     }
