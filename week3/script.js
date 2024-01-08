@@ -60,7 +60,7 @@ document.querySelector(".japanese").onmouseover = (event) => {
         }
       })
       .join("");
-    hoverTriggered = false;
+    isRunning = false;
 
     // The interval function is cleared and a new timeout function is set if the number of iterations is greater than or equal to the length of the value in the target element's data attribute.
     if (iterations >= event.target.dataset.value.length) {
