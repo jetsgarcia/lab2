@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap");
+
+// Resets
+// --------------------------------------------------
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Variables
+:root {
+  --font-size: 16px;
+}
+
+.light-mode {
+  --body-background-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 10%);
+  --text-color-grayed: hsl(0, 0%, 40%);
+  --primary-color: hsl(216, 100%, 55%);
+}
+
+.dark-mode {
+  --body-background-color: hsl(0, 0%, 10%);
+  --text-color: hsl(0, 0%, 95%);
+  --text-color-grayed: hsl(0, 0%, 60%);
+  --primary-color: hsl(216, 100%, 65%);
+}
+
+// General styles
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--text-color);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+// Components
+@import "../scss_partials/components/navbar";

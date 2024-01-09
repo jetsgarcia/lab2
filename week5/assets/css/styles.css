@@ -1,1 +1,85 @@
-/*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-size: 16px;
+}
+
+.light-mode {
+  --body-background-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 10%);
+  --text-color-grayed: hsl(0, 0%, 40%);
+  --primary-color: hsl(216, 100%, 55%);
+}
+
+.dark-mode {
+  --body-background-color: hsl(0, 0%, 10%);
+  --text-color: hsl(0, 0%, 95%);
+  --text-color-grayed: hsl(0, 0%, 60%);
+  --primary-color: hsl(216, 100%, 65%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--text-color);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 0 16px hsla(0, 0%, 60%, 0.2);
+  background-color: var(--body-background-color);
+  border-radius: 1rem 1rem 0 0;
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar ul li {
+  width: 33.3333333333%;
+}
+.navbar ul li.active a * {
+  fill: var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.navbar ul li:hover:not(.active) a * {
+  color: var(--text-color);
+  opacity: 1;
+}
+.navbar ul li a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  text-decoration: none;
+}
+.navbar ul li a * {
+  transition: all 0.3s ease-in-out;
+}
+.navbar ul li a .nav-icon {
+  height: 1.5rem;
+  margin-bottom: 0.25rem;
+  opacity: 0.8;
+  fill: var(--text-color);
+}
+.navbar ul li a span {
+  color: var(--text-color-grayed);
+}/*# sourceMappingURL=styles.css.map */
