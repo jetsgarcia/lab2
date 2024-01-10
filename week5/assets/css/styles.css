@@ -22,7 +22,7 @@
 }
 
 .dark-mode {
-  --body-background-color: hsl(0, 0%, 10%);
+  --body-background-color: hsl(0, 0%, 5%);
   --text-color: hsl(0, 0%, 95%);
   --text-color-grayed: hsl(0, 0%, 60%);
   --primary-color: hsl(216, 100%, 65%);
@@ -82,4 +82,27 @@ body {
 }
 .navbar ul li a span {
   color: var(--text-color-grayed);
+}
+
+.dark-mode .navbar {
+  box-shadow: none;
+  border-top: 1px solid var(--primary-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    bottom: auto;
+    top: 0;
+    border-radius: 0 0 0 0;
+  }
+  .navbar .nav-icon {
+    display: none;
+  }
+  .dark-mode .navbar {
+    border-top: none;
+    border-bottom: none;
+  }
+  main {
+    padding-top: 5rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
