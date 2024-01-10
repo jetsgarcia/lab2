@@ -46,6 +46,9 @@ body {
   background-color: var(--body-background-color);
   border-radius: 1rem 1rem 0 0;
 }
+.navbar .name {
+  display: none;
+}
 .navbar ul {
   list-style-type: none;
   display: flex;
@@ -94,8 +97,25 @@ body {
     bottom: auto;
     top: 0;
     border-radius: 0 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
   }
-  .navbar .nav-icon {
+  .navbar .name {
+    display: inline-block;
+    margin-left: 2.5rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    letter-spacing: 2%;
+  }
+  .navbar ul {
+    margin-right: 2.5rem;
+  }
+  .navbar ul li {
+    padding: 0 1rem;
+  }
+  .navbar ul li .nav-icon {
     display: none;
   }
   .dark-mode .navbar {

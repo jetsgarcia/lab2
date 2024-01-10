@@ -6,6 +6,10 @@
   background-color: var(--body-background-color);
   border-radius: 1rem 1rem 0 0;
 
+  .name {
+    display: none;
+  }
+
   ul {
     list-style-type: none;
     display: flex;
@@ -61,9 +65,29 @@
     bottom: auto;
     top: 0;
     border-radius: 0 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
 
-    .nav-icon {
-      display: none;
+    .name {
+      display: inline-block;
+      margin-left: 2.5rem;
+      color: var(--text-color);
+      font-size: 1.2rem;
+      letter-spacing: 2%;
+    }
+
+    ul {
+      margin-right: 2.5rem;
+
+      li {
+        padding: 0 1rem;
+
+        .nav-icon {
+          display: none;
+        }
+      }
     }
   }
 
