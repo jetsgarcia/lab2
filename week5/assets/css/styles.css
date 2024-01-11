@@ -45,6 +45,8 @@ body {
   box-shadow: 0 0 16px hsla(0, 0%, 60%, 0.2);
   background-color: var(--body-background-color);
   border-radius: 1rem 1rem 0 0;
+  display: flex;
+  justify-content: space-around;
 }
 .navbar .name {
   display: none;
@@ -109,14 +111,26 @@ body {
     font-size: 1.2rem;
     letter-spacing: 2%;
   }
-  .navbar ul {
+  .navbar .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  .navbar .nav-right .light-icon {
+    display: grid;
+    place-items: center;
+    margin-right: 1rem;
+  }
+  .navbar .nav-right ul {
     margin-right: 2.5rem;
   }
-  .navbar ul li {
+  .navbar .nav-right ul li {
     padding: 0 1rem;
   }
-  .navbar ul li .nav-icon {
+  .navbar .nav-right ul li .nav-icon {
     display: none;
+  }
+  .navbar .nav-right ul li a {
+    line-height: 1;
   }
   .dark-mode .navbar {
     border-top: none;
@@ -125,4 +139,17 @@ body {
   main {
     padding-top: 5rem;
   }
+}
+.light-mode .dark-icon {
+  display: none;
+}
+.light-mode .light-icon {
+  display: inline-block;
+}
+
+.dark-mode .dark-icon {
+  display: inline-block;
+}
+.dark-mode .light-icon {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
