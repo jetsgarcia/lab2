@@ -105,7 +105,7 @@
             />
           </svg>
           <label class="toggle">
-            <input type="checkbox" value="checked" />
+            <input type="checkbox" />
             <span class="slider"></span>
           </label>
         </div>
@@ -124,9 +124,9 @@
 
       function switchTheme(e) {
         if (e.target.checked) {
-          body.classList.replace("light-mode", "dark-mode");
-        } else {
           body.classList.replace("dark-mode", "light-mode");
+        } else {
+          body.classList.replace("light-mode", "dark-mode");
         }
       }
     </script>
