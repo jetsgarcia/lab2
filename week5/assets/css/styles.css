@@ -22,7 +22,7 @@
 }
 
 .dark-mode {
-  --body-background-color: hsl(0, 0%, 5%);
+  --body-background-color: hsl(0, 0%, 2%);
   --text-color: hsl(0, 0%, 95%);
   --text-color-grayed: hsl(0, 0%, 60%);
   --primary-color: hsl(216, 100%, 65%);
