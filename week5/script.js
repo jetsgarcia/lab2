@@ -32,3 +32,5 @@ function changePage(index) {
     pageElement.style.display = navigations[index] === page ? "block" : "none";
   });
 }
+
+document.querySelector("#home").innerHTML = "Hello World!";
