@@ -33,5 +33,4 @@ function changePage(index) {
   });
 }
 
-let dateToday = new Date().getDate();
-console.log(dateToday);
+document.addEventListener("DOMContentLoaded", () => console.log("DOM loaded"));
