@@ -36,7 +36,21 @@
     />
 
     <!-- Related files -->
-    <script type="module" src="./script.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <ul>
+        <li><button onclick="changePage(0)">Home</button></li>
+        <li><button onclick="changePage(1)">About</button></li>
+        <li><button onclick="changePage(2)">Portfolio</button></li>
+      </ul>
+    </nav>
+    <div id="content">
+      <section class="show" id="home">a</section>
+      <section class="hide" id="about">b</section>
+      <section class="hide" id="portfolio">c</section>
+    </div>
+  </body>
 </html>
