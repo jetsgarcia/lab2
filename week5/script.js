@@ -33,4 +33,4 @@ function changePage(index) {
   });
 }
 
-document.querySelector("#home").innerHTML = "Hello World!";
+console.log(navigations[0]);
