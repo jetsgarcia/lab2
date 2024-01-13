@@ -33,4 +33,5 @@ function changePage(index) {
   });
 }
 
-console.log(navigations[0]);
+let dateToday = new Date().getDate();
+console.log(dateToday);
