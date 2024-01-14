@@ -1,3 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap");
+
+// Global reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  padding-top: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: var(--body-background-color);
+}
+
+// Variables for light and dark mode
+.light-mode {
+  --body-background-color: hsl(0, 0%, 98%);
+  --text-color: hsl(0, 0%, 12%);
+  --text-color-grayed: hsl(0, 0%, 40%);
+  --primary-color: hsl(216, 100%, 55%);
+}
+
+.dark-mode {
+  --body-background-color: hsl(0, 0%, 2%);
+  --text-color: hsl(0, 0%, 98%);
+  --text-color-grayed: hsl(0, 0%, 60%);
+  --primary-color: hsl(216, 100%, 65%);
+}
+
+// Reusable styles
 .hide {
   display: none;
 }
@@ -5,3 +48,5 @@
 .show {
   display: block;
 }
+
+@import "../scss_partials/components/navbar";

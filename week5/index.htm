@@ -39,13 +39,23 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <script src="./script.js" defer></script>
   </head>
-  <body>
-    <nav>
+  <body class="light-mode">
+    <nav class="navbar">
+      <a href="index.htm">Jetter Garcia</a>
       <ul>
-        <li><button onclick="changePage(0)">Home</button></li>
-        <li><button onclick="changePage(1)">About</button></li>
-        <li><button onclick="changePage(2)">Portfolio</button></li>
+        <li>
+          <button id="home-link" class="active" onclick="changePage(0)">
+            Home
+          </button>
+        </li>
+        <li>
+          <button id="about-link" onclick="changePage(1)">About</button>
+        </li>
+        <li>
+          <button id="portfolio-link" onclick="changePage(2)">Portfolio</button>
+        </li>
       </ul>
+      <div class="toggle-theme-container"><button>Change Theme</button></div>
     </nav>
     <div id="content">
       <section class="show" id="home">a</section>
