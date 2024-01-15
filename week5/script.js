@@ -13,13 +13,9 @@
 
 */
 
-// Initialization variables for theme
-let prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
-let navLinks = ["#home-link", "#about-link", "#portfolio-link"];
-// let theme = ["light-mode", "dark-mode"];
-
-// Initializations variables for navigation contents to display
+// Initializations variables for navigation
 let navigations = ["home", "about", "portfolio"];
+let navLinks = ["#home-link", "#about-link", "#portfolio-link"];
 
 function changePage(index) {
   // We loop through each page in the 'navigations' array.
@@ -44,4 +40,42 @@ function changePage(index) {
       linkElement.classList.remove("active");
     }
   });
+}
+
+// Initializations variables for theme
+let prefersDarkMode = localStorage.getItem("prefersDarkMode");
+
+// Get the elements from the DOM for changing the theme
+const toggleSwitch = document.querySelector('.toggle input[type="checkbox"]');
+const body = document.querySelector("body");
+const slider = document.querySelector(".slider");
+
+document.addEventListener("DOMContentLoaded", (e) => {
+  if (prefersDarkMode === "true") {
+    toggleSwitch.checked = true;
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+  } else {
+    toggleSwitch.checked = false;
+    document.body.classList.remove("dark-mode");
+    document.body.classList.add("light-mode");
+  }
+});
+
+toggleSwitch.addEventListener("change", switchTheme, true);
+
+function switchTheme(e) {
+  if (e.target.checked !== true) {
+    body.classList.remove("dark-mode");
+    body.classList.add("light-mode");
+    slider.classList.add("light");
+    localStorage.setItem("prefersDarkMode", "false");
+    toggleSwitch.checked = false;
+  } else {
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+    slider.classList.remove("light");
+    localStorage.setItem("prefersDarkMode", "true");
+    toggleSwitch.checked = true;
+  }
 }
