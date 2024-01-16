@@ -14,8 +14,13 @@
 */
 
 // Initializations variables for navigation
-let navigations = ["home", "about", "portfolio"];
-let navLinks = ["#home-link", "#about-link", "#portfolio-link"];
+let navigations = ["home", "about", "portfolio", "contact"];
+let navLinks = [
+  "#home-link",
+  "#about-link",
+  "#portfolio-link",
+  "#contact-link",
+];
 
 function changePage(index) {
   // We loop through each page in the 'navigations' array.

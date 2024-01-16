@@ -99,12 +99,24 @@
       cursor: pointer;
       font-size: 1rem;
       color: var(--text-color-grayed);
-      transition: color 0.2s ease-in-out;
       font-family: inherit;
       font-size: 1rem;
 
+      & > p {
+        transition: color 0.3s ease-in-out;
+      }
+
       &.active {
         color: var(--primary-color);
+      }
+
+      &.active svg {
+        fill: var(--primary-color);
+      }
+
+      svg {
+        display: none;
+        fill: var(--text-color-grayed);
       }
 
       &:hover:not(.active) {
@@ -114,14 +126,32 @@
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Your styles for tablets go here */
+  .top-bar {
+    padding: 0 4rem;
+  }
+}
+
 // media query for phone
 @media (max-width: 768px) {
   .top-bar {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   .navbar {
     top: auto;
     bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 2.5rem 2rem;
+    border-top: 1px solid var(--text-color-grayed);
+    border-radius: 1rem 1rem 0 0;
+    background-color: var(--body-background-color);
+
+    ul li button svg {
+      display: inline-block;
+    }
   }
 }
