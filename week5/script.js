@@ -42,7 +42,7 @@ function changePage(index) {
   });
 }
 
-// Initializations variables for theme
+// This variable is for gettign the preferred theme from the local storage of the user
 let prefersDarkMode = localStorage.getItem("prefersDarkMode");
 
 // Get the elements from the DOM for changing the theme
@@ -51,14 +51,15 @@ const body = document.querySelector("body");
 const slider = document.querySelector(".slider");
 
 document.addEventListener("DOMContentLoaded", (e) => {
+  // We check if the user has a preferred theme
   if (prefersDarkMode === "true") {
+    // If the user has a preferred theme, we set the theme to the preferred theme
     toggleSwitch.checked = true;
     body.classList.remove("light-mode");
     body.classList.add("dark-mode");
   } else {
+    // If the user doesn't have a preferred theme, we set the theme to the default theme
     toggleSwitch.checked = false;
-    document.body.classList.remove("dark-mode");
-    document.body.classList.add("light-mode");
   }
 });
 

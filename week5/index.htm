@@ -40,21 +40,8 @@
     <script src="./script.js" defer></script>
   </head>
   <body class="light-mode">
-    <nav class="navbar">
-      <a href="index.htm">Jetter Garcia</a>
-      <ul>
-        <li>
-          <button id="home-link" class="active" onclick="changePage(0)">
-            Home
-          </button>
-        </li>
-        <li>
-          <button id="about-link" onclick="changePage(1)">About</button>
-        </li>
-        <li>
-          <button id="portfolio-link" onclick="changePage(2)">Portfolio</button>
-        </li>
-      </ul>
+    <div class="top-bar">
+      <a href="index.htm">Jetter</a>
       <div class="toggle-theme-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -71,6 +58,21 @@
           <span class="slider"></span>
         </label>
       </div>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <button id="home-link" class="active" onclick="changePage(0)">
+            Home
+          </button>
+        </li>
+        <li>
+          <button id="about-link" onclick="changePage(1)">About</button>
+        </li>
+        <li>
+          <button id="portfolio-link" onclick="changePage(2)">Portfolio</button>
+        </li>
+      </ul>
     </nav>
     <div id="content">
       <section class="show" id="home">a</section>
