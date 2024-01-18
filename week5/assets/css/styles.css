@@ -45,6 +45,10 @@ body {
   display: block;
 }
 
+#content section {
+  color: var(--text-color);
+}
+
 .top-bar {
   width: 100%;
   height: 4rem;

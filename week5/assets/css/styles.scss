@@ -49,4 +49,8 @@ body {
   display: block;
 }
 
+#content section {
+  color: var(--text-color);
+}
+
 @import "../scss_partials/components/navbar";
