@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -27,14 +27,16 @@ body {
   --body-background-color: hsl(0, 0%, 98%);
   --text-color: hsl(0, 0%, 12%);
   --text-color-grayed: hsl(0, 0%, 40%);
-  --primary-color: hsl(216, 100%, 55%);
+  --primary-color: hsl(216, 100%, 68%);
+  --hover-color: hsl(224, 100%, 57%);
 }
 
 .dark-mode {
-  --body-background-color: hsl(0, 0%, 2%);
+  --body-background-color: hsl(240, 25%, 3%);
   --text-color: hsl(0, 0%, 98%);
   --text-color-grayed: hsl(0, 0%, 60%);
-  --primary-color: hsl(216, 100%, 65%);
+  --primary-color: hsl(216, 100%, 78%);
+  --hover-color: hsl(224, 100%, 80%);
 }
 
 .hide {
@@ -183,4 +185,86 @@ body {
   .navbar ul li button svg {
     display: inline-block;
   }
+}
+#home .hero {
+  height: 35rem;
+  display: flex;
+  align-items: center;
+}
+#home .hero .left {
+  width: 50%;
+  margin: 3rem 3rem 3rem 8rem;
+}
+#home .hero .left .big-hero-text {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 200;
+  line-height: 130%;
+}
+#home .hero .left .big-hero-text span {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+#home .hero .left .description {
+  margin-bottom: 3rem;
+  line-height: 180%;
+  letter-spacing: 1%;
+  font-weight: 300;
+}
+#home .hero .left .button-container {
+  display: flex;
+  gap: 0.5rem;
+}
+#home .hero .left .button-container .primary {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  background-color: var(--primary-color);
+  color: var(--body-background-color);
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+#home .hero .left .button-container .primary:hover {
+  background-color: var(--hover-color);
+}
+#home .hero .left .button-container .secondary {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  background-color: var(--body-background-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: color, background-color 0.2s ease-in-out;
+}
+#home .hero .left .button-container .secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--body-background-color);
+}
+#home .hero .right {
+  width: 50%;
+  margin: 3rem 8rem 3rem 3rem;
+}
+#home .hero .right .moving-eye {
+  display: grid;
+  place-items: center;
+}
+#home .hero .right .moving-eye .moving-eye-container {
+  position: relative;
+}
+#home .hero .right .moving-eye #anchor {
+  width: 25rem;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#home .hero .right .moving-eye #eye {
+  margin-top: 2rem;
+  width: 10rem;
+  height: auto;
+  left: 120px;
+  position: absolute;
 }/*# sourceMappingURL=styles.css.map */

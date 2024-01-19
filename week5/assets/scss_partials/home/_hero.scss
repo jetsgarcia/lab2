@@ -1,0 +1,95 @@
+#home .hero {
+  height: 35rem;
+  display: flex;
+  align-items: center;
+
+  .left {
+    width: 50%;
+    margin: 3rem 3rem 3rem 8rem;
+
+    .big-hero-text {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 200;
+      line-height: 130%;
+
+      span {
+        color: var(--primary-color);
+        font-weight: 400;
+      }
+    }
+
+    .description {
+      margin-bottom: 3rem;
+      line-height: 180%;
+      letter-spacing: 1%;
+      font-weight: 300;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 0.5rem;
+
+      .primary {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        background-color: var(--primary-color);
+        color: var(--body-background-color);
+        border: none;
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+          background-color: var(--hover-color);
+        }
+      }
+
+      .secondary {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        background-color: var(--body-background-color);
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: color, background-color 0.2s ease-in-out;
+
+        &:hover {
+          background-color: var(--primary-color);
+          color: var(--body-background-color);
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 50%;
+    margin: 3rem 8rem 3rem 3rem;
+
+    .moving-eye {
+      display: grid;
+      place-items: center;
+
+      .moving-eye-container {
+        position: relative;
+      }
+
+      #anchor {
+        width: 25rem;
+        height: auto;
+        object-fit: contain;
+      }
+
+      #eye {
+        margin-top: 2rem;
+        width: 10rem;
+        height: auto;
+        left: 120px;
+        position: absolute;
+      }
+    }
+  }
+}
