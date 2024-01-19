@@ -203,9 +203,11 @@ body {
   margin-bottom: 1rem;
   font-weight: 200;
   line-height: 130%;
-  max-width: 14ch;
+  max-width: 20ch;
+  display: flex;
+  flex-direction: column;
 }
-#home .hero .left .big-hero-text span {
+#home .hero .left .big-hero-text .colored {
   color: var(--primary-color);
   font-weight: 400;
 }

@@ -13,9 +13,11 @@
       margin-bottom: 1rem;
       font-weight: 200;
       line-height: 130%;
-      max-width: 14ch;
+      max-width: 20ch;
+      display: flex;
+      flex-direction: column;
 
-      span {
+      .colored {
         color: var(--primary-color);
         font-weight: 400;
       }
