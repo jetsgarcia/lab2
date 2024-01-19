@@ -51,9 +51,16 @@ body {
   display: block;
 }
 
-#content section {
+#content section:not(:first-child) {
   color: var(--text-color);
+  text-align: center;
+  margin-top: 3rem;
 }
 
 @import "../scss_partials/components/navbar";
-@import "../scss_partials/home/hero";
+
+// Partials for laptop view
+@import "../scss_partials/laptop/home/hero";
+
+// Partials for phone view
+@import "../scss_partials/phone/home/hero";
