@@ -132,6 +132,5 @@ const anime1 = new Anime(
   "October 5, 2017"
 );
 
-function displayAnime() {
-  document.querySelector("#about").innerHTML = anime1.title;
-}
+window.mousex = 42;
+console.log(window.mousex);
