@@ -10,10 +10,6 @@
   padding: 0;
 }
 
-#content {
-  padding-top: 4rem;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -35,8 +31,8 @@ body {
   --body-background-color: hsl(240, 25%, 3%);
   --text-color: hsl(0, 0%, 98%);
   --text-color-grayed: hsl(0, 0%, 60%);
-  --primary-color: hsl(216, 100%, 78%);
-  --hover-color: hsl(224, 100%, 80%);
+  --primary-color: hsl(216, 50%, 68%);
+  --hover-color: hsl(216, 100%, 80%);
 }
 
 .hide {
@@ -50,7 +46,7 @@ body {
 #content section:not(:first-child) {
   color: var(--text-color);
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 8rem;
 }
 
 .top-bar {
@@ -66,10 +62,13 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 9998;
 }
-.top-bar a {
+.top-bar .name {
   text-decoration: none;
   color: var(--text-color);
   font-size: 1.3rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 .top-bar .toggle-theme-container svg {
   fill: var(--text-color);
@@ -193,6 +192,7 @@ body {
   display: flex;
   align-items: center;
   color: var(--text-color);
+  padding-top: 4rem;
 }
 #home .hero .left {
   width: 50%;
@@ -209,7 +209,7 @@ body {
 }
 #home .hero .left .big-hero-text .colored {
   color: var(--primary-color);
-  font-weight: 400;
+  font-weight: 500;
 }
 #home .hero .left .description {
   margin-bottom: 3rem;

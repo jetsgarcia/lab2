@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   color: var(--text-color);
+  padding-top: 4rem;
 
   .left {
     width: 50%;
@@ -19,7 +20,7 @@
 
       .colored {
         color: var(--primary-color);
-        font-weight: 400;
+        font-weight: 500;
       }
     }
 

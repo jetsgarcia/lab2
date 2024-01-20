@@ -113,3 +113,11 @@ document.addEventListener("mousemove", (e) => {
   // Apply new position to eye
   eye.style.transform = `translate(${eyeX / 16}rem, ${eyeY / 16}rem)`;
 });
+
+// For the anime object sample
+const anime = {
+  title: "Just Because!",
+  episodes: 12,
+  genre: "Romance, School",
+  releaseDate: "October 5, 2017",
+};
