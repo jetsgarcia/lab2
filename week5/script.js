@@ -114,14 +114,24 @@ document.addEventListener("mousemove", (e) => {
   eye.style.transform = `translate(${eyeX / 16}rem, ${eyeY / 16}rem)`;
 });
 
-// For the anime object sample
-const anime = {
-  title: "Just Because!",
-  episodes: 12,
-  genre: "Romance, School",
-  releaseDate: "October 5, 2017",
-};
+// For the anime list
+
+class Anime {
+  constructor(title, episodes, genre, releaseDate) {
+    this.title = title;
+    this.episodes = episodes;
+    this.genre = genre;
+    this.releaseDate = releaseDate;
+  }
+}
+
+const anime1 = new Anime(
+  "Just Because!",
+  12,
+  "Romance, School",
+  "October 5, 2017"
+);
 
 function displayAnime() {
-  console.log(anime);
+  console.log(anime1);
 }
