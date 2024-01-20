@@ -133,5 +133,5 @@ const anime1 = new Anime(
 );
 
 function displayAnime() {
-  console.log(anime1);
+  document.querySelector("#about").innerHTML = anime1.title;
 }
