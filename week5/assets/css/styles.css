@@ -192,7 +192,7 @@ body {
   display: flex;
   align-items: center;
   color: var(--text-color);
-  padding-top: 4rem;
+  padding-top: 8rem;
 }
 #home .hero .left {
   width: 50%;

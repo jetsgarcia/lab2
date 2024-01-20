@@ -113,24 +113,3 @@ document.addEventListener("mousemove", (e) => {
   // Apply new position to eye
   eye.style.transform = `translate(${eyeX / 16}rem, ${eyeY / 16}rem)`;
 });
-
-// For the anime list
-
-class Anime {
-  constructor(title, episodes, genre, releaseDate) {
-    this.title = title;
-    this.episodes = episodes;
-    this.genre = genre;
-    this.releaseDate = releaseDate;
-  }
-}
-
-const anime1 = new Anime(
-  "Just Because!",
-  12,
-  "Romance, School",
-  "October 5, 2017"
-);
-
-window.mousex = 42;
-console.log(window.mousex);
