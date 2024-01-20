@@ -113,3 +113,9 @@ document.addEventListener("mousemove", (e) => {
   // Apply new position to eye
   eye.style.transform = `translate(${eyeX / 16}rem, ${eyeY / 16}rem)`;
 });
+
+const anime = {
+  title: "Just Because!",
+  episodes: 12,
+  releaseDate: "October 5, 2017",
+};
