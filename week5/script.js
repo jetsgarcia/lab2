@@ -121,3 +121,7 @@ const anime = {
   genre: "Romance, School",
   releaseDate: "October 5, 2017",
 };
+
+function displayAnime() {
+  console.log(anime);
+}
