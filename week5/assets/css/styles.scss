@@ -28,6 +28,8 @@ body {
   --text-color-grayed: hsl(0, 0%, 40%);
   --primary-color: hsl(216, 100%, 68%);
   --hover-color: hsl(224, 100%, 57%);
+  --grayed-color: hsl(0, 0%, 100%);
+  --grayed-color-hover: hsl(0, 0%, 90%);
 }
 
 .dark-mode {
@@ -36,9 +38,24 @@ body {
   --text-color-grayed: hsl(0, 0%, 60%);
   --primary-color: hsl(216, 50%, 68%);
   --hover-color: hsl(216, 100%, 80%);
+  --grayed-color: hsl(0, 0%, 10%);
+  --grayed-color-hover: hsl(0, 0%, 15%);
 }
 
 // Reusable styles
+:root {
+  --laptop-content-width: 1250px;
+  --laptop-padding: 0 4rem;
+}
+
+.light-mode {
+  color: var(--text-color);
+}
+
+.dark-mode {
+  color: var(--text-color);
+}
+
 .hide {
   display: none;
 }
@@ -47,7 +64,7 @@ body {
   display: block;
 }
 
-#content section:not(:first-child) {
+.placeholder {
   color: var(--text-color);
   text-align: center;
   margin-top: 8rem;
@@ -57,6 +74,8 @@ body {
 
 // Partials for laptop view
 @import "../scss_partials/laptop/home/hero";
+@import "../scss_partials/laptop/home/things_i_do";
 
 // Partials for phone view
 @import "../scss_partials/phone/home/hero";
+@import "../scss_partials/phone/home/things_i_do";

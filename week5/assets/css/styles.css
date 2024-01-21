@@ -25,6 +25,8 @@ body {
   --text-color-grayed: hsl(0, 0%, 40%);
   --primary-color: hsl(216, 100%, 68%);
   --hover-color: hsl(224, 100%, 57%);
+  --grayed-color: hsl(0, 0%, 100%);
+  --grayed-color-hover: hsl(0, 0%, 90%);
 }
 
 .dark-mode {
@@ -33,6 +35,21 @@ body {
   --text-color-grayed: hsl(0, 0%, 60%);
   --primary-color: hsl(216, 50%, 68%);
   --hover-color: hsl(216, 100%, 80%);
+  --grayed-color: hsl(0, 0%, 10%);
+  --grayed-color-hover: hsl(0, 0%, 15%);
+}
+
+:root {
+  --laptop-content-width: 1250px;
+  --laptop-padding: 0 4rem;
+}
+
+.light-mode {
+  color: var(--text-color);
+}
+
+.dark-mode {
+  color: var(--text-color);
 }
 
 .hide {
@@ -43,7 +60,7 @@ body {
   display: block;
 }
 
-#content section:not(:first-child) {
+.placeholder {
   color: var(--text-color);
   text-align: center;
   margin-top: 8rem;
@@ -192,11 +209,14 @@ body {
   display: flex;
   align-items: center;
   color: var(--text-color);
-  padding-top: 8rem;
+  margin: 0 auto;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  padding: var(--laptop-padding);
+  width: clamp(none, 100vw, var(--laptop-content-width));
 }
 #home .hero .left {
   width: 50%;
-  margin: 3rem 3rem 3rem 8rem;
 }
 #home .hero .left .big-hero-text {
   font-size: 3rem;
@@ -252,7 +272,6 @@ body {
 }
 #home .hero .right {
   width: 50%;
-  margin: 3rem 8rem 3rem 3rem;
 }
 #home .hero .right .moving-eye {
   display: grid;
@@ -275,14 +294,71 @@ body {
   position: absolute;
 }
 
+#home .things-i-do {
+  margin: 0 auto;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  padding: var(--laptop-padding);
+  width: clamp(none, 100vw, var(--laptop-content-width));
+}
+#home .things-i-do h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+#home .things-i-do h2::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.2rem;
+  background-color: var(--primary-color);
+  margin: 1rem 0;
+}
+#home .things-i-do .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+#home .things-i-do .container > div {
+  background-color: var(--grayed-color);
+  border-radius: 1.5rem;
+  padding: 2rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+#home .things-i-do .container > div:hover {
+  background-color: var(--grayed-color-hover);
+}
+#home .things-i-do .container > div > lord-icon {
+  width: 5rem;
+  height: 5rem;
+}
+#home .things-i-do .container > div .desc {
+  line-height: 2;
+}
+#home .things-i-do .container > div .title {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
+  #home .hero {
+    margin: 3rem 1rem;
+    padding: 0;
+  }
   #home .hero .left {
-    margin: 1rem;
     width: 100%;
     align-items: flex-start;
   }
   #home .hero .left .big-hero-text {
-    max-width: none;
+    max-width: 13ch;
+    font-size: 2.5rem;
+    display: inline-block;
+  }
+  #home .hero .left .description {
+    font-size: 1rem;
   }
   #home .hero .left .button-container .primary,
   #home .hero .left .button-container .secondary {
@@ -291,4 +367,20 @@ body {
   #home .hero .right {
     display: none;
   }
+}
+#home .things-i-do {
+  margin: 0 1rem 8rem;
+  padding: 0;
+}
+#home .things-i-do h2 {
+  margin-bottom: 2rem;
+}
+#home .things-i-do .container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
+}
+#home .things-i-do .container > div .desc {
+  text-align: left;
+  margin-left: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
