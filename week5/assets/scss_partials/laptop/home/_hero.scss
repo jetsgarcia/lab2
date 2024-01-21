@@ -7,7 +7,7 @@
   margin-top: 8rem;
   margin-bottom: 8rem;
   padding: var(--laptop-padding);
-  width: clamp(none, 100vw, var(--laptop-content-width));
+  max-width: 1200px;
 
   .left {
     width: 50%;
