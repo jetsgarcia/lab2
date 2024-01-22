@@ -29,7 +29,7 @@ body {
   --primary-color: hsl(216, 100%, 68%);
   --hover-color: hsl(224, 100%, 57%);
   --grayed-color: hsl(0, 0%, 100%);
-  --grayed-color-hover: hsl(0, 0%, 90%);
+  --grayed-color-hover: hsl(0, 0%, 100%);
 }
 
 .dark-mode {
@@ -74,6 +74,7 @@ body {
 // Partials for laptop view
 @import "../scss_partials/laptop/home/hero";
 @import "../scss_partials/laptop/home/things_i_do";
+@import "../scss_partials/laptop/home/how_i_work";
 
 // Partials for phone view
 @import "../scss_partials/phone/home/hero";

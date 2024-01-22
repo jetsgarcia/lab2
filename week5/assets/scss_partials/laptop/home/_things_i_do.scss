@@ -32,8 +32,12 @@
       text-align: center;
       transition: all 0.3s ease-in-out;
 
-      &:hover {
-        background-color: var(--grayed-color-hover);
+      &.light {
+        border: 1px solid hsl(0, 0%, 20%);
+
+        &:hover {
+          background-color: var(--body-background-color);
+        }
       }
 
       > lord-icon {
