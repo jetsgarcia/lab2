@@ -330,14 +330,5 @@
         <p class="placeholder">Coming Soon 😊</p>
       </section>
     </div>
-
-
-    <?php
-if (5 > 3) {
-  echo "Have a good day!";
-}
-    ?>
-
-
   </body>
 </html>
