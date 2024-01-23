@@ -1,3 +1,7 @@
+<?php
+    $nickname = "Jett";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,6 +45,7 @@
     <script src="https://cdn.lordicon.com/lordicon.js" defer></script>
   </head>
   <body class="light-mode">
+
     <div class="top-bar">
       <a href="#hero">
         <button class="name" onclick="changePage(0)">Jetter Garcia</button>
