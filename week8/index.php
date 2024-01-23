@@ -333,9 +333,9 @@
 
 
     <?php
-    $x = 10;
-    $y = 50;
-    $sum = $x + $y;
+if (5 > 3) {
+  echo "Have a good day!";
+}
     ?>
 
 
