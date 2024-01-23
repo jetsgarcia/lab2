@@ -221,36 +221,104 @@
         </section>
         <section class="how-i-work">
           <h2>How I Work Through a Project</h2>
-          <ol>
-            <li>
-              <p class="list-header">Planning</p>
-              <ul>
-                <li>Define project goals and requirements</li>
-                <li>Identify target audience and key features.</li>
-              </ul>
-            </li>
-            <li>
-              <p class="list-header">Design</p>
-              <ul>
-                <li>Create wireframes and design mockups</li>
-                <li>Plotting design guidelines</li>
-              </ul>
-            </li>
-            <li>
-              <p class="list-header">Development</p>
-              <ul>
-                <li>Setup the version control system</li>
-                <li>Develop frontend, api and the backend</li>
-              </ul>
-            </li>
-            <li>
-              <p class="list-header">Deployment</p>
-              <ul>
-                <li>Setup production environment</li>
-                <li>Deploying the application</li>
-              </ul>
-            </li>
-          </ol>
+          <div class="container">
+            <div class="left">
+              <button class="current work-button" onclick="toggleContent(0)">
+                Planning
+              </button>
+              <button class="work-button" onclick="toggleContent(1)">
+                Design
+              </button>
+              <button class="work-button" onclick="toggleContent(2)">
+                Development
+              </button>
+              <button class="work-button" onclick="toggleContent(3)">
+                Deployment
+              </button>
+            </div>
+            <div class="right">
+              <div class="show planning">
+                <p>
+                  During the planning phase, the project kicks off by clearly
+                  defining its goals and requirements. This involves pinpointing
+                  the specific objectives, such as enhancing user engagement or
+                  promoting a product, to provide direction. Simultaneously,
+                  understanding the target audience through market research
+                  ensures a tailored online experience.
+                </p>
+                <p>
+                  The next step involves identifying key features essential for
+                  achieving the project goals. This straightforward approach
+                  sets the foundation for a well-defined project scope and
+                  ensures the website resonates effectively with its intended
+                  users.
+                </p>
+              </div>
+
+              <div class="hide design">
+                <p>
+                  The design phase begins with creating wireframes and design
+                  mockups. This step involves sketching out the basic layout and
+                  structure of the website to visualize its functionality and
+                  user interface. These wireframes serve as a blueprint for the
+                  development process. Following this, the design mockups are
+                  crafted, incorporating colors, typography, and visual elements
+                  to give a realistic representation of the final product.
+                </p>
+                <p>
+                  Simultaneously, design guidelines are plotted, ensuring
+                  consistency in aesthetics and user experience across the
+                  website. This meticulous planning in the design phase lays the
+                  groundwork for a visually appealing and user-friendly website
+                  that aligns seamlessly with the client's objectives and
+                  preferences.
+                </p>
+              </div>
+
+              <div class="hide development">
+                <p>
+                  Moving into the development phase, the initial step is setting
+                  up a version control system, ensuring a systematic and
+                  collaborative approach to coding. This allows for efficient
+                  tracking of changes and collaboration among team members.
+                  Following this, the development process kicks off with
+                  building the frontend, creating the user interface and visual
+                  elements that users interact with.
+                </p>
+                <p>
+                  Concurrently, the backend and API development take place,
+                  establishing the functional backbone of the website. This
+                  holistic approach ensures a cohesive integration between the
+                  user interface and the underlying infrastructure, leading to a
+                  robust and seamless web application. By adhering to best
+                  practices and employing a systematic version control system,
+                  the development phase paves the way for a stable and scalable
+                  website that meets the defined project goals.
+                </p>
+              </div>
+
+              <div class="hide deployment">
+                <p>
+                  As the development phase concludes, the focus shifts towards
+                  deployment. The first step involves setting up the production
+                  environment, configuring servers, and ensuring all necessary
+                  resources are in place for a smooth transition from
+                  development to live deployment.
+                </p>
+                <p>
+                  Following this, the application is deployed, making it
+                  accessible to users on the internet. This process involves
+                  transferring the developed code and assets to the production
+                  servers, configuring databases, and addressing any potential
+                  issues to ensure a seamless user experience. By meticulously
+                  setting up the production environment and deploying the
+                  application, the web development service ensures that the
+                  website is ready for real-world use, meeting the defined goals
+                  and providing a reliable online presence for its users.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </section>
       <section class="hide" id="about">

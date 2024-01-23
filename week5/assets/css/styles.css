@@ -24,7 +24,8 @@ body {
   --text-color: hsl(0, 0%, 12%);
   --text-color-grayed: hsl(0, 0%, 40%);
   --primary-color: hsl(216, 100%, 68%);
-  --hover-color: hsl(224, 100%, 57%);
+  --primary-inactive: hsl(216, 50%, 68%, 0.5);
+  --hover-color: hsl(216, 100%, 80%);
   --grayed-color: hsl(0, 0%, 100%);
   --grayed-color-hover: hsl(0, 0%, 100%);
 }
@@ -34,6 +35,7 @@ body {
   --text-color: hsl(0, 0%, 98%);
   --text-color-grayed: hsl(0, 0%, 60%);
   --primary-color: hsl(216, 50%, 68%);
+  --primary-inactive: hsl(216, 50%, 68%, 0.5);
   --hover-color: hsl(216, 100%, 80%);
   --grayed-color: hsl(0, 0%, 10%);
   --grayed-color-hover: hsl(0, 0%, 15%);
@@ -303,7 +305,7 @@ body {
 #home .things-i-do h2 {
   font-size: 1.8rem;
   font-weight: 400;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 #home .things-i-do h2::after {
   content: "";
@@ -355,7 +357,7 @@ body {
 #home .how-i-work h2 {
   font-size: 1.8rem;
   font-weight: 400;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 #home .how-i-work h2::after {
   content: "";
@@ -365,21 +367,35 @@ body {
   background-color: var(--primary-color);
   margin: 1rem 0;
 }
-#home .how-i-work ol {
-  margin-left: 1rem;
+#home .how-i-work .container {
+  display: flex;
 }
-#home .how-i-work ol > li {
-  margin-bottom: 1rem;
+#home .how-i-work .container .left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 1rem;
 }
-#home .how-i-work ol .list-header {
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
+#home .how-i-work .container .left .work-button {
+  background-color: var(--primary-inactive);
+  font-size: 1.1rem;
+  font-family: inherit;
+  letter-spacing: 1%;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-#home .how-i-work ol ul {
-  margin-left: 1rem;
+#home .how-i-work .container .left .work-button.current {
+  background-color: var(--primary-color);
 }
-#home .how-i-work ol ul > li {
+#home .how-i-work .container .left .work-button:hover:not(.current) {
+  background-color: var(--hover-color);
+}
+#home .how-i-work .container .right {
+  width: 70%;
+}
+#home .how-i-work .container .right p:first-child {
   margin-bottom: 0.5rem;
 }
 
@@ -425,5 +441,33 @@ body {
   #home .things-i-do .container > div .desc {
     text-align: left;
     margin-left: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  #home .how-i-work {
+    margin: 0 1rem 8rem;
+    padding: 0;
+    width: calc(100% - 2rem);
+  }
+  #home .how-i-work h2 {
+    margin-bottom: 1.5rem;
+  }
+  #home .how-i-work .container {
+    flex-direction: column;
+  }
+  #home .how-i-work .container .left {
+    width: 100%;
+    padding: 0;
+  }
+  #home .how-i-work .container .left .work-button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+  }
+  #home .how-i-work .container .right {
+    width: 100%;
+  }
+  #home .how-i-work .container .right p:first-child {
+    margin-top: 1rem;
   }
 }/*# sourceMappingURL=styles.css.map */

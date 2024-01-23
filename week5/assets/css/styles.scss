@@ -27,7 +27,9 @@ body {
   --text-color: hsl(0, 0%, 12%);
   --text-color-grayed: hsl(0, 0%, 40%);
   --primary-color: hsl(216, 100%, 68%);
-  --hover-color: hsl(224, 100%, 57%);
+  --primary-inactive: hsl(216, 50%, 68%, 0.5);
+  --hover-color: hsl(216, 100%, 80%);
+
   --grayed-color: hsl(0, 0%, 100%);
   --grayed-color-hover: hsl(0, 0%, 100%);
 }
@@ -37,6 +39,7 @@ body {
   --text-color: hsl(0, 0%, 98%);
   --text-color-grayed: hsl(0, 0%, 60%);
   --primary-color: hsl(216, 50%, 68%);
+  --primary-inactive: hsl(216, 50%, 68%, 0.5);
   --hover-color: hsl(216, 100%, 80%);
   --grayed-color: hsl(0, 0%, 10%);
   --grayed-color-hover: hsl(0, 0%, 15%);
@@ -79,3 +82,4 @@ body {
 // Partials for phone view
 @import "../scss_partials/phone/home/hero";
 @import "../scss_partials/phone/home/things_i_do";
+@import "../scss_partials/phone/home/how_i_work";

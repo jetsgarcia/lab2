@@ -113,3 +113,45 @@ document.addEventListener("mousemove", (e) => {
   // Apply new position to eye
   eye.style.transform = `translate(${eyeX / 16}rem, ${eyeY / 16}rem)`;
 });
+
+// For toggling the display of text in How I Work section
+const workContents = ["planning", "design", "development", "deployment"];
+const workContentsClass = [
+  ".planning",
+  ".design",
+  ".development",
+  ".deployment",
+];
+
+// For toggline the display of text in How I Work section
+const toggleContent = (contentIndex) => {
+  // Get the current content based on the provided index
+  const currentContent = workContents[contentIndex];
+  const workButtons = document.querySelectorAll(".work-button");
+
+  for (let i = 0; i < workButtons.length; i++) {
+    if (i === contentIndex) {
+      workButtons[i].classList.add("current");
+    } else {
+      workButtons[i].classList.remove("current");
+    }
+  }
+
+  // Iterate over all the contents
+  workContents.forEach((_, i) => {
+    // If this is not the content to show
+    if (workContents[i] !== currentContent) {
+      // Get the element for this content
+      const element = document.querySelector(workContentsClass[i]);
+      // If it's currently shown, hide it
+      if (element.classList.contains("show")) {
+        element.classList.add("hide");
+      }
+      // Ensure it's not marked as shown
+      element.classList.remove("show");
+    }
+  });
+
+  // Mark the current content as shown
+  document.querySelector(workContentsClass[contentIndex]).classList.add("show");
+};
