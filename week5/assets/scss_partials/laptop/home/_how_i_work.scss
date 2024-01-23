@@ -40,7 +40,7 @@
         transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
         &:not(.current) {
-          color: var(--text-color);
+          color: var(--text-color-grayed);
         }
 
         &.current {
@@ -48,8 +48,7 @@
         }
 
         &:hover:not(.current) {
-          background-color: var(--hover-color);
-          color: var(--text-color-opposite);
+          color: var(--text-color);
         }
       }
     }

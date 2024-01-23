@@ -389,14 +389,13 @@ body {
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 #home .how-i-work .container .left .work-button:not(.current) {
-  color: var(--text-color);
+  color: var(--text-color-grayed);
 }
 #home .how-i-work .container .left .work-button.current {
   background-color: var(--primary-color);
 }
 #home .how-i-work .container .left .work-button:hover:not(.current) {
-  background-color: var(--hover-color);
-  color: var(--text-color-opposite);
+  color: var(--text-color);
 }
 #home .how-i-work .container .right {
   width: 70%;
