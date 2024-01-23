@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500;700&display=swap");
+
+// Global reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: var(--body-background-color);
+}
+
+// Variables for light and dark mode
+.light-mode {
+  --body-background-color: hsl(0, 0%, 98%);
+  --text-color: hsl(0, 0%, 12%);
+  --text-color-grayed: hsl(0, 0%, 40%);
+  --primary-color: hsl(216, 100%, 68%);
+  --primary-inactive: hsl(216, 50%, 68%, 0.5);
+  --hover-color: hsl(216, 100%, 80%);
+  --text-color-opposite: hsl(0, 0%, 97%);
+  --grayed-color: hsl(0, 0%, 100%);
+  --grayed-color-hover: hsl(0, 0%, 100%);
+}
+
+.dark-mode {
+  --body-background-color: hsl(240, 25%, 3%);
+  --text-color: hsl(0, 0%, 98%);
+  --text-color-grayed: hsl(0, 0%, 60%);
+  --text-color-opposite: hsl(0, 0%, 3%);
+  --primary-color: hsl(216, 50%, 68%);
+  --primary-inactive: hsl(216, 50%, 68%, 0.5);
+  --hover-color: hsl(216, 100%, 80%);
+  --grayed-color: hsl(0, 0%, 10%);
+  --grayed-color-hover: hsl(0, 0%, 15%);
+}
+
+// Reusable styles
+:root {
+  --laptop-padding: 0 4rem;
+}
+
+.light-mode {
+  color: var(--text-color);
+}
+
+.dark-mode {
+  color: var(--text-color);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.placeholder {
+  color: var(--text-color);
+  text-align: center;
+  margin-top: 8rem;
+}
+
+@import "../scss_partials/components/navbar";
+
+// Partials for laptop view
+@import "../scss_partials/laptop/home/hero";
+@import "../scss_partials/laptop/home/things_i_do";
+@import "../scss_partials/laptop/home/how_i_work";
+
+// Partials for phone view
+@import "../scss_partials/phone/home/hero";
+@import "../scss_partials/phone/home/things_i_do";
+@import "../scss_partials/phone/home/how_i_work";

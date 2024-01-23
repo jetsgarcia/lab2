@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  #home .hero {
+    margin: 3rem 1rem;
+    padding: 0;
+    width: auto;
+
+    .left {
+      width: 100%;
+      align-items: flex-start;
+
+      .big-hero-text {
+        max-width: 13ch;
+        font-size: 2.5rem;
+        display: inline-block;
+      }
+
+      .description {
+        font-size: 1rem;
+      }
+
+      .button-container {
+        .primary,
+        .secondary {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .right {
+      display: none;
+    }
+  }
+}

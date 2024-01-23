@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  #home .how-i-work {
+    margin: 0 1rem 8rem;
+    padding: 0;
+    width: calc(100% - 2rem);
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .container {
+      flex-direction: column;
+
+      .left {
+        width: 100%;
+        padding: 0;
+
+        .work-button {
+          width: 100%;
+          margin-bottom: 1rem;
+          padding: 1rem 0;
+        }
+      }
+
+      .right {
+        width: 100%;
+
+        & p:first-child {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
