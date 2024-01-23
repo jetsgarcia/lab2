@@ -398,6 +398,10 @@ body {
 #home .how-i-work .container .right p:first-child {
   margin-bottom: 0.5rem;
 }
+#home .how-i-work .container .right p {
+  letter-spacing: 0.2px;
+  line-height: 1.65;
+}
 
 @media (max-width: 768px) {
   #home .hero {

@@ -52,8 +52,13 @@
     .right {
       width: 70%;
 
-      & p:first-child {
+      p:first-child {
         margin-bottom: 0.5rem;
+      }
+
+      p {
+        letter-spacing: 0.2px;
+        line-height: 1.65;
       }
     }
   }
