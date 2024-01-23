@@ -1,7 +1,3 @@
-<?php
-    $nickname = "Jett";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -334,8 +330,14 @@
         <p class="placeholder">Coming Soon 😊</p>
       </section>
     </div>
+
+
     <?php
-    $cars = array("Volvo","BMW","Toyota");
+    $x = 10;
+    $y = 50;
+    $sum = $x + $y;
     ?>
+
+
   </body>
 </html>
