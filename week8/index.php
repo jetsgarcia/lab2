@@ -321,6 +321,7 @@
               </div>
             </div>
           </div>
+
         </section>
       </section>
       <section class="hide" id="about">
@@ -333,5 +334,8 @@
         <p class="placeholder">Coming Soon 😊</p>
       </section>
     </div>
+    <?php
+    echo "<h2>PHP is Fun!</h2>";
+    ?>
   </body>
 </html>
