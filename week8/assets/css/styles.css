@@ -23,9 +23,9 @@ body {
   --body-background-color: hsl(0, 0%, 98%);
   --text-color: hsl(0, 0%, 12%);
   --text-color-grayed: hsl(0, 0%, 40%);
-  --primary-color: hsl(216, 100%, 68%);
+  --primary-color: hsl(216, 80%, 65%);
   --primary-inactive: hsl(216, 50%, 68%, 0.5);
-  --hover-color: hsl(216, 100%, 80%);
+  --hover-color: hsl(216, 100%, 70%);
   --text-color-opposite: hsl(0, 0%, 97%);
   --grayed-color: hsl(0, 0%, 100%);
   --grayed-color-hover: hsl(0, 0%, 100%);
@@ -207,6 +207,17 @@ body {
     display: inline-block;
   }
 }
+footer {
+  background-color: var(--grayed-color-hover);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  footer {
+    display: none;
+  }
+}
 #home .hero {
   height: 35rem;
   display: flex;
@@ -380,6 +391,7 @@ body {
 }
 #home .how-i-work .container .left .work-button {
   background-color: var(--background-color);
+  color: var(--text-color-opposite);
   border: 1px solid var(--primary-color);
   font-size: 1.1rem;
   font-family: inherit;
@@ -389,6 +401,7 @@ body {
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 #home .how-i-work .container .left .work-button:not(.current) {
+  cursor: pointer;
   color: var(--text-color-grayed);
 }
 #home .how-i-work .container .left .work-button.current {
@@ -406,6 +419,48 @@ body {
 #home .how-i-work .container .right p {
   letter-spacing: 0.2px;
   line-height: 1.65;
+}
+
+#home .contact-cta {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+  padding: var(--laptop-padding);
+  max-width: 900px;
+}
+#home .contact-cta h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+#home .contact-cta h2::before {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: var(--primary-color);
+  margin: 1rem auto;
+}
+#home .contact-cta p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 2;
+}
+#home .contact-cta button {
+  color: var(--text-color-opposite);
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+#home .contact-cta button:hover {
+  background-color: var(--hover-color);
 }
 
 @media (max-width: 768px) {
@@ -478,5 +533,23 @@ body {
   }
   #home .how-i-work .container .right p:first-child {
     margin-top: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  #home .contact-cta {
+    padding: 1rem;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+    text-align: left;
+  }
+  #home .contact-cta h2 {
+    font-size: 2.5rem;
+  }
+  #home .contact-cta h2::before {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  #home .contact-cta p {
+    width: 88%;
   }
 }/*# sourceMappingURL=styles.css.map */

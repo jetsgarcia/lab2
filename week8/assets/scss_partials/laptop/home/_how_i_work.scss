@@ -31,6 +31,7 @@
 
       .work-button {
         background-color: var(--background-color);
+        color: var(--text-color-opposite);
         border: 1px solid var(--primary-color);
         font-size: 1.1rem;
         font-family: inherit;
@@ -40,6 +41,7 @@
         transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
         &:not(.current) {
+          cursor: pointer;
           color: var(--text-color-grayed);
         }
 

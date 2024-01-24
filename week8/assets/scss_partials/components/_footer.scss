@@ -1,0 +1,11 @@
+footer {
+  background-color: var(--grayed-color-hover);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  footer {
+    display: none;
+  }
+}

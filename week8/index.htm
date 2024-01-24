@@ -40,8 +40,8 @@
     <script src="./script.js" defer></script>
     <script src="https://cdn.lordicon.com/lordicon.js" defer></script>
   </head>
-  <body class="light-mode">
 
+  <body class="light-mode">
     <div class="top-bar">
       <a href="#hero">
         <button class="name" onclick="changePage(0)">Jetter Garcia</button>
@@ -317,7 +317,14 @@
               </div>
             </div>
           </div>
-
+        </section>
+        <section class="contact-cta">
+          <h2>Let's Transform Ideas Into Reality!</h2>
+          <p>
+            Let's combine our skills and create digital magic together, forging
+            a partnership where creativity and technical prowess collide
+          </p>
+          <button onclick="changePage(3)">Let's Collaborate</button>
         </section>
       </section>
       <section class="hide" id="about">
@@ -330,5 +337,12 @@
         <p class="placeholder">Coming Soon 😊</p>
       </section>
     </div>
+    <footer>
+      &copy; <span class="date-year"></span> Jetter Garcia. All Rights Reserved
+    </footer>
+    <script>
+      const year = new Date().getFullYear();
+      document.querySelector(".date-year").innerHTML = year;
+    </script>
   </body>
 </html>

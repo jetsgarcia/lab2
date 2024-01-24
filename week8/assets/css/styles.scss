@@ -26,9 +26,9 @@ body {
   --body-background-color: hsl(0, 0%, 98%);
   --text-color: hsl(0, 0%, 12%);
   --text-color-grayed: hsl(0, 0%, 40%);
-  --primary-color: hsl(216, 100%, 68%);
+  --primary-color: hsl(216, 80%, 65%);
   --primary-inactive: hsl(216, 50%, 68%, 0.5);
-  --hover-color: hsl(216, 100%, 80%);
+  --hover-color: hsl(216, 100%, 70%);
   --text-color-opposite: hsl(0, 0%, 97%);
   --grayed-color: hsl(0, 0%, 100%);
   --grayed-color-hover: hsl(0, 0%, 100%);
@@ -74,13 +74,16 @@ body {
 }
 
 @import "../scss_partials/components/navbar";
+@import "../scss_partials/components/footer";
 
 // Partials for laptop view
 @import "../scss_partials/laptop/home/hero";
 @import "../scss_partials/laptop/home/things_i_do";
 @import "../scss_partials/laptop/home/how_i_work";
+@import "../scss_partials/laptop/home/contact_cta";
 
 // Partials for phone view
 @import "../scss_partials/phone/home/hero";
 @import "../scss_partials/phone/home/things_i_do";
 @import "../scss_partials/phone/home/how_i_work";
+@import "../scss_partials/phone/home/contact_cta";
