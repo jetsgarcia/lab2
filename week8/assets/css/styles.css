@@ -47,6 +47,11 @@ body {
   --laptop-padding: 0 4rem;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .light-mode {
   color: var(--text-color);
 }
@@ -67,8 +72,28 @@ body {
   color: var(--text-color);
   text-align: center;
   margin-top: 8rem;
+  height: 82dvh;
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.show-hidden {
+  opacity: 1;
+  animation: fadeInFromBottomToTop 0.5s ease-in-out;
+}
+
+@keyframes fadeInFromBottomToTop {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .top-bar {
   width: 100%;
   height: 4rem;
@@ -211,6 +236,7 @@ footer {
   background-color: var(--grayed-color-hover);
   text-align: center;
   padding: 1rem 0;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -463,6 +489,45 @@ footer {
   background-color: var(--hover-color);
 }
 
+#about {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 8rem;
+  color: var(--text-color);
+  height: 82dvh;
+}
+#about .container {
+  display: flex;
+  align-items: center;
+}
+#about .container .pic img {
+  border-radius: 2rem;
+}
+#about .container .desc {
+  margin-left: 2rem;
+}
+#about .container .desc h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#about .container .desc .intro {
+  margin-bottom: 1rem;
+}
+#about .container .desc .intro strong {
+  color: var(--primary-color);
+}
+#about .container .desc .biography {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+#about .container .desc .details {
+  margin-bottom: 1rem;
+}
+#about .container .desc .label {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
   #home .hero {
     margin: 3rem 1rem;
@@ -551,5 +616,33 @@ footer {
   }
   #home .contact-cta p {
     width: 88%;
+  }
+}
+@media (max-width: 768px) {
+  #about {
+    margin: 6rem 1rem 8rem;
+  }
+  #about .container {
+    flex-direction: column;
+  }
+  #about .container .pic img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  #about .container .desc {
+    margin-left: 0;
+  }
+  #about .container .desc h2 {
+    font-size: 1.5rem;
+  }
+  #about .container .desc .intro {
+    margin-bottom: 1rem;
+  }
+  #about .container .desc .biography {
+    margin-bottom: 2rem;
+  }
+  #about .container .desc .details {
+    margin-bottom: 1rem;
   }
 }/*# sourceMappingURL=styles.css.map */

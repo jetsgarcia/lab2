@@ -51,6 +51,11 @@ body {
   --laptop-padding: 0 4rem;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .light-mode {
   color: var(--text-color);
 }
@@ -71,6 +76,27 @@ body {
   color: var(--text-color);
   text-align: center;
   margin-top: 8rem;
+  height: 82dvh;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.show-hidden {
+  opacity: 1;
+  animation: fadeInFromBottomToTop 0.5s ease-in-out;
+}
+
+@keyframes fadeInFromBottomToTop {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @import "../scss_partials/components/navbar";
@@ -81,9 +107,11 @@ body {
 @import "../scss_partials/laptop/home/things_i_do";
 @import "../scss_partials/laptop/home/how_i_work";
 @import "../scss_partials/laptop/home/contact_cta";
+@import "../scss_partials/laptop/about/about";
 
 // Partials for phone view
 @import "../scss_partials/phone/home/hero";
 @import "../scss_partials/phone/home/things_i_do";
 @import "../scss_partials/phone/home/how_i_work";
 @import "../scss_partials/phone/home/contact_cta";
+@import "../scss_partials/phone/about/about";

@@ -1,0 +1,35 @@
+@media (max-width: 768px) {
+  #about {
+    margin: 6rem 1rem 8rem;
+
+    .container {
+      flex-direction: column;
+
+      .pic img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+
+      .desc {
+        margin-left: 0;
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .intro {
+          margin-bottom: 1rem;
+        }
+
+        .biography {
+          margin-bottom: 2rem;
+        }
+
+        .details {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

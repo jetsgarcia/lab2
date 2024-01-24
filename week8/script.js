@@ -6,7 +6,7 @@
 
   Note: By the time I wrote this code, God and I knew how it worked. Now, only God knows.
 
-  Hours wasted coding: 2
+  Hours wasted coding: 5
 
   Dependencies:
   - None
@@ -45,6 +45,11 @@ function changePage(index) {
       linkElement.classList.remove("active");
     }
   });
+  resetFadeInFromBottomToTop();
+
+  if (navigations[index] === "about") {
+    fadeInFromBottomToTop();
+  }
 }
 
 // This variable is for gettign the preferred theme from the local storage of the user
@@ -155,3 +160,21 @@ const toggleContent = (contentIndex) => {
   // Mark the current content as shown
   document.querySelector(workContentsClass[contentIndex]).classList.add("show");
 };
+
+function fadeInFromBottomToTop() {
+  const hiddenElements = document.querySelectorAll(".hidden");
+  hiddenElements.forEach((element, index) => {
+    setTimeout(() => {
+      element.classList.remove("hidden");
+      element.classList.add("show-hidden");
+    }, 300 * index);
+  });
+}
+
+function resetFadeInFromBottomToTop() {
+  const hiddenElements = document.querySelectorAll(".show-hidden");
+  hiddenElements.forEach((element) => {
+    element.classList.remove("show-hidden");
+    element.classList.add("hidden");
+  });
+}
