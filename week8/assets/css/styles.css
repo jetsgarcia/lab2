@@ -528,6 +528,153 @@ footer {
   color: var(--primary-color);
 }
 
+#contact .email {
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 1100px;
+}
+#contact .email .container {
+  display: flex;
+  padding-top: 4rem;
+}
+#contact .email .container .left {
+  width: 35%;
+  padding: 2rem;
+  background-color: var(--grayed-color);
+  border-radius: 1rem;
+  border: 1px solid hsl(0, 0%, 10%);
+}
+#contact .email .container .left h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+#contact .email .container .left .description {
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+#contact .email .container .left .alternative-contact {
+  margin-bottom: 3rem;
+}
+#contact .email .container .left .alternative-contact p {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+#contact .email .container .left .alternative-contact p svg {
+  fill: var(--primary-color);
+}
+#contact .email .container .left .socmed {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+#contact .email .container .left .socmed a {
+  text-decoration: none;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+#contact .email .container .left .socmed a:hover {
+  opacity: 1;
+}
+#contact .email .container .left .socmed a svg {
+  fill: var(--text-color);
+}
+#contact .email .container .right {
+  width: 65%;
+  padding: 4rem;
+}
+#contact .email .container .right form {
+  display: flex;
+  flex-direction: column;
+}
+#contact .email .container .right form .full-name {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+#contact .email .container .right form .full-name .first-name,
+#contact .email .container .right form .full-name .last-name {
+  width: 50%;
+  padding: 0.8rem;
+  margin: 0;
+  background-color: var(--grayed-color);
+  border: 1px solid hsl(0, 0%, 10%);
+  color: var(--text-color-grayed);
+  border-radius: 0.5rem;
+  font-family: inherit;
+}
+#contact .email .container .right form .full-name .first-name:focus,
+#contact .email .container .right form .full-name .last-name:focus {
+  outline: none;
+}
+#contact .email .container .right form #email,
+#contact .email .container .right form #subject,
+#contact .email .container .right form #message {
+  margin-bottom: 0;
+  border: 1px solid hsl(0, 0%, 10%);
+}
+#contact .email .container .right form input {
+  padding: 0.8rem;
+  background-color: var(--grayed-color);
+  border: 1px solid hsl(0, 0%, 10%);
+  color: var(--text-color-grayed);
+  font-family: inherit;
+  border-radius: 0.5rem;
+}
+#contact .email .container .right form input:focus {
+  outline: none;
+}
+#contact .email .container .right form textarea {
+  font-family: inherit;
+  padding: 0.8rem;
+  background-color: var(--grayed-color);
+  border: 1px solid hsl(0, 0%, 10%);
+  color: var(--text-color-grayed);
+  resize: none;
+  height: 10rem;
+  border-radius: 0.5rem;
+}
+#contact .email .container .right form textarea:focus {
+  outline: none;
+}
+#contact .email .container .right form .submit-button-container {
+  display: flex;
+  justify-content: end;
+}
+#contact .email .container .right form .submit-button-container input {
+  padding: 0.8rem 2rem;
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--text-color-opposite);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#contact .email .container .right form .submit-button-container input:hover {
+  background-color: var(--hover-color);
+}
+
+#contact .map {
+  margin: 0 auto;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  max-width: 1100px;
+}
+#contact .map h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+#contact .map iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 1rem;
+}
+
 @media (max-width: 768px) {
   #home .hero {
     margin: 3rem 1rem;
@@ -620,7 +767,7 @@ footer {
 }
 @media (max-width: 768px) {
   #about {
-    margin: 6rem 1rem 8rem;
+    margin: 6rem 1rem 15rem;
   }
   #about .container {
     flex-direction: column;
@@ -644,5 +791,110 @@ footer {
   }
   #about .container .desc .details {
     margin-bottom: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  #contact .email {
+    margin: 2rem 1rem 0;
+  }
+  #contact .email .container {
+    flex-direction: column;
+    gap: 0;
+  }
+  #contact .email .container .left {
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--grayed-color);
+    border-radius: 1rem;
+  }
+  #contact .email .container .left h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  #contact .email .container .left .description {
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+  #contact .email .container .left .alternative-contact {
+    margin-bottom: 3rem;
+  }
+  #contact .email .container .left .alternative-contact p {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  #contact .email .container .left .alternative-contact p svg {
+    fill: var(--primary-color);
+  }
+  #contact .email .container .left .socmed {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+  #contact .email .container .left .socmed a {
+    text-decoration: none;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+  }
+  #contact .email .container .left .socmed a:hover {
+    opacity: 1;
+  }
+  #contact .email .container .left .socmed a svg {
+    fill: var(--text-color);
+  }
+  #contact .email .container .right {
+    width: 100%;
+    padding: 0;
+    margin-top: 3rem;
+  }
+  #contact .email .container .right form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  #contact .email .container .right form .full-name {
+    margin-bottom: 1.5rem;
+  }
+  #contact .email .container .right form #email,
+  #contact .email .container .right form #subject,
+  #contact .email .container .right form #message {
+    margin-bottom: 0;
+  }
+  #contact .email .container .right form input,
+  #contact .email .container .right form textarea {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--grayed-color);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  #contact .email .container .right form input:focus,
+  #contact .email .container .right form textarea:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+  }
+  #contact .email .container .right form textarea {
+    resize: none;
+    height: 200px;
+  }
+  #contact .email .container .right form button {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+  #contact .email .container .right form button:hover {
+    background-color: var(--hover-color);
+  }
+}
+@media (max-width: 768px) {
+  #contact .map {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+    padding: 1rem;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,151 @@
+#contact .email {
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 1100px;
+
+  .container {
+    display: flex;
+    padding-top: 4rem;
+
+    .left {
+      width: 35%;
+      padding: 2rem;
+      background-color: var(--grayed-color);
+      border-radius: 1rem;
+      border: 1px solid hsl(0, 0%, 10%);
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      .description {
+        line-height: 1.8;
+        margin-bottom: 2.5rem;
+      }
+
+      .alternative-contact {
+        margin-bottom: 3rem;
+
+        p {
+          margin-bottom: 1rem;
+          display: flex;
+          gap: 1rem;
+
+          svg {
+            fill: var(--primary-color);
+          }
+        }
+      }
+
+      .socmed {
+        margin-bottom: 2rem;
+        display: flex;
+        gap: 1rem;
+
+        a {
+          text-decoration: none;
+          opacity: 0.5;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            opacity: 1;
+          }
+
+          svg {
+            fill: var(--text-color);
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 65%;
+      padding: 4rem;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .full-name {
+          display: flex;
+          gap: 1rem;
+          justify-content: space-between;
+          margin-bottom: 1.5rem;
+
+          .first-name,
+          .last-name {
+            width: 50%;
+            padding: 0.8rem;
+            margin: 0;
+            background-color: var(--grayed-color);
+            border: 1px solid hsl(0, 0%, 10%);
+            color: var(--text-color-grayed);
+            border-radius: 0.5rem;
+            font-family: inherit;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        #email,
+        #subject,
+        #message {
+          margin-bottom: 0;
+          border: 1px solid hsl(0, 0%, 10%);
+        }
+
+        input {
+          padding: 0.8rem;
+          background-color: var(--grayed-color);
+          border: 1px solid hsl(0, 0%, 10%);
+          color: var(--text-color-grayed);
+          font-family: inherit;
+          border-radius: 0.5rem;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        textarea {
+          font-family: inherit;
+          padding: 0.8rem;
+          background-color: var(--grayed-color);
+          border: 1px solid hsl(0, 0%, 10%);
+          color: var(--text-color-grayed);
+          resize: none;
+          height: 10rem;
+          border-radius: 0.5rem;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .submit-button-container {
+          display: flex;
+          justify-content: end;
+
+          input {
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            border: none;
+            color: var(--text-color-opposite);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              background-color: var(--hover-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
