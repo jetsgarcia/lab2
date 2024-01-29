@@ -1,8 +1,14 @@
 @media (max-width: 768px) {
   #home .hero {
-    margin: 3rem 1rem;
-    padding: 0;
+    height: auto;
+    margin: 1rem;
+    padding-top: 6rem;
     width: auto;
+    margin-bottom: 8rem;
+
+    .outermost-container {
+      padding: 0;
+    }
 
     .left {
       width: 100%;
