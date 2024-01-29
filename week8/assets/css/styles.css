@@ -612,10 +612,8 @@ footer {
 #contact .email .container .right form .full-name .last-name:focus {
   outline: none;
 }
-#contact .email .container .right form #email,
-#contact .email .container .right form #subject,
-#contact .email .container .right form #message {
-  margin-bottom: 0;
+#contact .email .container .right form .mb-1 {
+  margin-bottom: 1.5rem;
   border: 1px solid hsl(0, 0%, 10%);
 }
 #contact .email .container .right form input {
