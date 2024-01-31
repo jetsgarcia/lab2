@@ -772,7 +772,7 @@ footer {
 }
 @media (max-width: 768px) {
   #about {
-    margin: 6rem 1rem 15rem;
+    margin: 6rem 1rem 20rem;
   }
   #about .container {
     flex-direction: column;
