@@ -467,61 +467,58 @@
               </div>
             </div>
             <div class="right">
+              <?php
+                $firstname = $lastname = $email = $subject = $message = "";
+              ?>
               <form action="#" method="post">
                 <div class="full-name">
-                  <input
-                    class="first-name"
-                    type="text"
-                    id="fname"
-                    name="fname"
-                    required
-                    placeholder="First Name"
-                  />
+                  <input  
+                  class="first-name" 
+                  type="text" 
+                  name="fname" 
+                  value="<?php echo 
+                  $firstname; ?>" 
+                  placeholder="First Name" 
+                  required>
 
-                  <input
-                    class="last-name"
-                    type="text"
-                    id="lname"
-                    name="lname"
-                    required
-                    placeholder="Last Name"
-                  />
+                  <input  
+                  class="last-name" 
+                  type="text" 
+                  name="lname" 
+                  value="<?php echo 
+                  $lastname; ?>" 
+                  placeholder="Last Name" 
+                  required>
                 </div>
 
-                <input
-                  class="mb-1"
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder="Email"
-                />
+                <input  
+                class="mb-1" 
+                type="email" 
+                name="email" 
+                value="<?php echo $email; ?>" 
+                placeholder="Email" 
+                required>
 
-                <input
-                  class="mb-1"
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  placeholder="Subject"
-                />
+                <input  
+                class="mb-1" 
+                type="text"
+                name="subject"
+                value="<?php echo $subject; ?>" 
+                placeholder="Subject" 
+                required>
 
                 <textarea
                   class="mb-1"
                   id="message"
                   name="message"
                   rows="4"
+                  value="<?php echo $message; ?>" 
                   required
                   placeholder="Message"
                 ></textarea>
 
                 <div class="submit-button-container">
-                  <input type="submit" value="Submit" onclick="submitForm()" />
-                  <script>
-                    function submitForm() {
-                      alert("This form is still not functional");
-                    }
-                  </script>
+                  <input type="submit" value="Submit"/>
                 </div>
               </form>
             </div>
