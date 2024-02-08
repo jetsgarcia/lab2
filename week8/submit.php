@@ -4,7 +4,12 @@ $username = "webprogmi222_sf221";
 $password = "xE*Y2nleNVvZm[!!";
 $dbname = "webprogmi222_sf221";
 
-include 'index.php';
+// Retrieve form data
+$firstname = $_POST['fname'] ?? '';
+$lastname = $_POST['lname'] ?? '';
+$email = $_POST['email'] ?? '';
+$subject = $_POST['subject'] ?? '';
+$message = $_POST['message'] ?? '';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -18,7 +23,6 @@ VALUES ('$firstname', '$lastname', '$email', '$subject', '$message')";
 
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
   header('Location: index.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
