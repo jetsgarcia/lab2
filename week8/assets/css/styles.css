@@ -636,6 +636,7 @@ footer {
   resize: none;
   height: 10rem;
   border-radius: 0.5rem;
+  font-size: 0.9rem;
 }
 #contact .email .container .right form textarea:focus {
   outline: none;

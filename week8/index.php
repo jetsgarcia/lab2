@@ -368,7 +368,7 @@
                 placeholder="Message"><?php echo $message; ?></textarea>
 
               <div class="submit-button-container">
-                <input type="submit" value="submit" name="submit" />
+                <input type="submit" value="Submit" name="submit" />
               </div>
             </form>
 
