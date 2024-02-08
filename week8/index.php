@@ -476,7 +476,7 @@
                   class="first-name" 
                   type="text" 
                   name="fname" 
-                  value="<?php echo 
+                  value="<?php 
                   $firstname; ?>" 
                   placeholder="First Name" 
                   required>
@@ -485,7 +485,7 @@
                   class="last-name" 
                   type="text" 
                   name="lname" 
-                  value="<?php echo 
+                  value="<?php 
                   $lastname; ?>" 
                   placeholder="Last Name" 
                   required>
@@ -495,7 +495,7 @@
                 class="mb-1" 
                 type="email" 
                 name="email" 
-                value="<?php echo $email; ?>" 
+                value="<?php $email; ?>" 
                 placeholder="Email" 
                 required>
 
@@ -503,7 +503,7 @@
                 class="mb-1" 
                 type="text"
                 name="subject"
-                value="<?php echo $subject; ?>" 
+                value="<?php $subject; ?>" 
                 placeholder="Subject" 
                 required>
 
@@ -512,7 +512,7 @@
                   id="message"
                   name="message"
                   rows="4"
-                  value="<?php echo $message; ?>" 
+                  value="<?php $message; ?>" 
                   required
                   placeholder="Message"
                 ></textarea>
