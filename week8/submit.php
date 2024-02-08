@@ -13,17 +13,15 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// $sql = "INSERT INTO jlgarcia2_myguests (firstname, lastname, email, subject, message)
-// VALUES ('$firstname', '$lastname', '$email', '$subject', '$message')";
-
 $sql = "INSERT INTO jlgarcia2_myguests (firstname, lastname, email, subject, message)
-VALUES ('Jetter', 'Garcia', 'jtr@gmail.com', 'Test', 'Test message')";
+VALUES ('$firstname', '$lastname', '$email', '$subject', '$message')";
+
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
+  header('Location: index.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-// header('Location: index.php');
 $conn->close();
