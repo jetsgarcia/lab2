@@ -470,7 +470,7 @@
               <?php
                 $firstname = $lastname = $email = $subject = $message = "";
               ?>
-              <form action="#" method="post">
+              <form action="#" method="post" action="submit.php">
                 <div class="full-name">
                   <input  
                   class="first-name" 
