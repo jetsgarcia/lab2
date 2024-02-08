@@ -352,11 +352,11 @@
             ?>
             <form method="post" action="submit.php">
               <div class="full-name">
-                <input class="first-name" type="text" name="fname" value="<?php echo
-                  $firstname; ?>" placeholder="First Name" required>
+                <input class="first-name" type="text" name="fname" value="<?php echo $firstname; ?>"
+                  placeholder="First Name" required>
 
-                <input class="last-name" type="text" name="lname" value="<?php echo
-                  $lastname; ?>" placeholder="Last Name" required>
+                <input class="last-name" type="text" name="lname" value="<?php echo $lastname; ?>"
+                  placeholder="Last Name" required>
               </div>
 
               <input class="mb-1" type="email" name="email" value="<?php echo $email; ?>" placeholder="Email" required>
@@ -364,34 +364,14 @@
               <input class="mb-1" type="text" name="subject" value="<?php echo $subject; ?>" placeholder="Subject"
                 required>
 
-              <form method="post" action="submit.php">
-                <div class="full-name">
-                  <input class="first-name" type="text" name="fname" value="<?php echo $firstname; ?>"
-                    placeholder="First Name" required>
-
-                  <input class="last-name" type="text" name="lname" value="<?php echo $lastname; ?>"
-                    placeholder="Last Name" required>
-                </div>
-
-                <input class="mb-1" type="email" name="email" value="<?php echo $email; ?>" placeholder="Email"
-                  required>
-
-                <input class="mb-1" type="text" name="subject" value="<?php echo $subject; ?>" placeholder="Subject"
-                  required>
-
-                <textarea class="mb-1" id="message" name="message" rows="4" required
-                  placeholder="Message"><?php echo $message; ?></textarea>
-
-                <div class="submit-button-container">
-                  <input type="submit" value="submit" name="submit" />
-                </div>
-              </form>
-
+              <textarea class="mb-1" id="message" name="message" rows="4" required
+                placeholder="Message"><?php echo $message; ?></textarea>
 
               <div class="submit-button-container">
                 <input type="submit" value="submit" name="submit" />
               </div>
             </form>
+
           </div>
         </div>
       </section>
