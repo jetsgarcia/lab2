@@ -476,7 +476,7 @@
                   class="first-name" 
                   type="text" 
                   name="fname" 
-                  value="<?php 
+                  value="<?php  echo
                   $firstname; ?>" 
                   placeholder="First Name" 
                   required>
@@ -485,7 +485,7 @@
                   class="last-name" 
                   type="text" 
                   name="lname" 
-                  value="<?php 
+                  value="<?php  echo
                   $lastname; ?>" 
                   placeholder="Last Name" 
                   required>
@@ -495,7 +495,7 @@
                 class="mb-1" 
                 type="email" 
                 name="email" 
-                value="<?php $email; ?>" 
+                value="<?php echo $email; ?>" 
                 placeholder="Email" 
                 required>
 
@@ -503,7 +503,7 @@
                 class="mb-1" 
                 type="text"
                 name="subject"
-                value="<?php $subject; ?>" 
+                value="<?php echo $subject; ?>" 
                 placeholder="Subject" 
                 required>
 
@@ -512,13 +512,13 @@
                   id="message"
                   name="message"
                   rows="4"
-                  value="<?php $message; ?>" 
+                  value="<?php echo $message; ?>" 
                   required
                   placeholder="Message"
                 ></textarea>
 
                 <div class="submit-button-container">
-                  <input type="submit" value="Submit"/>
+                  <input type="submit" value="submit" name="submit"/>
                 </div>
               </form>
             </div>

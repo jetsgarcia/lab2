@@ -13,6 +13,12 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+echo $firstname;
+echo $lastname;
+echo $email;
+echo $subject;
+echo $message;
+
 $sql = "INSERT INTO jlgarcia2_myguests (firstname, lastname, email, subject, message)
 VALUES ('$firstname', '$lastname', '$email', '$subject', '$message')";
 
@@ -22,5 +28,5 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-header('Location: index.php');
+// header('Location: index.php');
 $conn->close();
